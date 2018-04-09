@@ -22,11 +22,14 @@
 [alias]
     winmerge = mergetool -y -t WinMerge
     a = add .
+    c = commit
+    p = push origin
     d = difftool -y -d -t default-difftool
     s = status --short
     k = !gitk --all --date-order --simplify-by-decoration
     l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
 [core]
-	editor = code --wait -new-window
+	# editor = code --wait -new-window
+	editor = vim
 	quotepath = false
 	autocrlf = false
