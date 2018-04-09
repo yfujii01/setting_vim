@@ -1,3 +1,11 @@
+echo 'キュイ━━━━ン            '
+echo '      ∧,,∧              '
+echo '     (・ω・｀) /|       '
+echo '  ／くＴ￣￣二=二] 三二─  '
+echo '  ￣￣￣＼二＼			'
+
+
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -92,9 +100,9 @@ fi
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -116,12 +124,13 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias volume='amixer sset Master'
+# road password
+if [ -f ~/env_list ]; then
+    . ~/.env_list
+fi
 
 
-. ~/env_list
-
-
+# git-bash style
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi

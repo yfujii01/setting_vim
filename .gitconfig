@@ -1,20 +1,32 @@
+[gui]
+	recentrepo = D:/fujii/git/PromotionGate
+	encoding = utf-8
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 [user]
-  email = fancl01+github@gmail.com
-  name = yfujii
-[alias]
-  d = difftool -y -d -t meld
-  s = status --short
-  k = !gitk --all --date-order --simplify-by-decoration
-  l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
-[core]
-  editor = vim
-  quotepath = false
-  autocrlf = false
+	name = yfujii01
+	email = y-fujii@rhizome-dev.sakura.ne.jp
 [diff]
-  tool = meld
-[difftool "meld"]
-  cmd = meld $LOCAL $REMOTE
+    tool = default-difftool
+[difftool "default-difftool"]
+    path = D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe
+    cmd = \"D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe\" -f \"*.*\" -e -u -r \"$LOCAL\" \"$REMOTE\"
 [merge]
-  tool = meld
-[mergetool "meld"]
-  cmd = meld $LOCAL $BASE $REMOTE --auto-merge
+    tool = WinMerge
+[mergetool "WinMerge"]
+    path = D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe
+    cmd = \"D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe\" -e -u \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[alias]
+    winmerge = mergetool -y -t WinMerge
+    a = add .
+    d = difftool -y -d -t default-difftool
+    s = status --short
+    k = !gitk --all --date-order --simplify-by-decoration
+    l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
+[core]
+	editor = code --wait -new-window
+	quotepath = false
+	autocrlf = false
