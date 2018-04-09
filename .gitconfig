@@ -1,12 +1,20 @@
 [user]
-	email = fancl01+github@gmail.com
-	name = yfujii
+  email = fancl01+github@gmail.com
+  name = yfujii
 [alias]
-	d = difftool -y -d -t default-difftool
-	s = status --short
-	k = !gitk --all --date-order --simplify-by-decoration
-	l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
+  d = difftool -y -d -t meld
+  s = status --short
+  k = !gitk --all --date-order --simplify-by-decoration
+  l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
 [core]
-	editor = vim
-	quotepath = false
-	autocrlf = false
+  editor = vim
+  quotepath = false
+  autocrlf = false
+[diff]
+  tool = meld
+[difftool "meld"]
+  cmd = meld $LOCAL $REMOTE
+[merge]
+  tool = meld
+[mergetool "meld"]
+  cmd = meld $LOCAL $BASE $REMOTE --auto-merge
