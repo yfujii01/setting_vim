@@ -1,3 +1,12 @@
 [user]
 	email = fancl01+github@gmail.com
 	name = yfujii
+[alias]
+	d = difftool -y -d -t default-difftool
+	s = status --short
+	k = !gitk --all --date-order --simplify-by-decoration
+	l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
+[core]
+	editor = vim
+	quotepath = false
+	autocrlf = false
