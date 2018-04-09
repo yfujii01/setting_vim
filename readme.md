@@ -1,6 +1,5 @@
 # dotfiles
 
-## link
-ln -s ~/dotfiles/.gitconfig ~/.gitconfig
-
-ln -s ~/dotfiles/.vimrc ~/.vimrc
+## 追加方法
+mv .bash_profle dotfiles/
+ln -s dotfiles/.bash_profle .bash_profle
