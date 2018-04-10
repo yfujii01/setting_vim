@@ -116,12 +116,15 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# my alias
 alias volume='amixer sset Master'
 
 
+# road password
 . ~/env_list
 
 
+# git-bash style
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
