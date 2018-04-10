@@ -14,7 +14,7 @@
 [alias]
     a = add .
     c = commit
-    p = push origin
+    p = push origin HEAD
     d = difftool -y -d -t default-difftool
     m = mergetool -y -t default-mergetool
     s = status --short
