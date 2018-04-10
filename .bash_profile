@@ -1,1 +1,3 @@
-echo 'hello'
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi
