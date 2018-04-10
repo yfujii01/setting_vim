@@ -1,9 +1,6 @@
-echo 'キュイ━━━━ン            '
-echo '      ∧,,∧              '
-echo '     (・ω・｀) /|       '
-echo '  ／くＴ￣￣二=二] 三二─  '
-echo '  ￣￣￣＼二＼			'
-
+if [ -f .aa ]; then
+    cat .aa
+fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
