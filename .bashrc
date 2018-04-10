@@ -1,9 +1,8 @@
-echo 'ƒLƒ…ƒC„ª„ª„ª„ªƒ“            '
-echo '      È,,È              '
-echo '     (EƒÖEM) /|       '
-echo '  ^‚­‚sPP“ñ=“ñ] O“ñ„Ÿ  '
-echo '  PPP_“ñ_			'
-
+echo 'ã‚­ãƒ¥ã‚¤â”â”â”â”ãƒ³            '
+echo '      âˆ§,,âˆ§              '
+echo '     (ãƒ»Ï‰ãƒ»ï½€) /|       '
+echo '  ï¼ãï¼´ï¿£ï¿£äºŒ=äºŒ] ä¸‰äºŒâ”€  '
+echo '  ï¿£ï¿£ï¿£ï¼¼äºŒï¼¼			'
 
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -126,7 +125,7 @@ fi
 
 # road password
 if [ -f ~/env_list ]; then
-    . ~/.env_list
+    . ~/env_list
 fi
 
 
