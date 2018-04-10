@@ -3,11 +3,11 @@
 ## デプロイ方法(linux)
 mv .bash_profle dotfiles/
 
-ln -s dotfiles/.bash_profle .bash_profle
-ln -s dotfiles/.bash_alias  .bash_alias
-ln -s dotfiles/.bashrc      .bashrc
-ln -s dotfiles/.gitconfig   .gitconfig
-ln -s dotfiles/.vimrc       .vimrc
+ln -s ~/dotfiles/.bash_profle   ~/.bash_profle
+ln -s ~/dotfiles/.bash_aliases  ~/.bash_aliases
+ln -s ~/dotfiles/.bashrc        ~/.bashrc
+ln -s ~/dotfiles/.gitconfig     ~/.gitconfig
+ln -s ~/dotfiles/.vimrc         ~/.vimrc
 
 
 ## デプロイ方法(win)
