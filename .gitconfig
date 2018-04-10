@@ -18,7 +18,8 @@
     d = difftool -y -d -t default-difftool
     m = mergetool -y -t default-mergetool
     s = status --short
-    k = !gitk --all --date-order --simplify-by-decoration
+    # k = !gitk --all --date-order --simplify-by-decoration
+    k = !gitk --all --date-order
     l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
 [core]
 	# editor = code --wait -new-window
