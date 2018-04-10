@@ -1,11 +1,3 @@
-[gui]
-	recentrepo = D:/fujii/git/PromotionGate
-	encoding = utf-8
-[filter "lfs"]
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 [user]
 	name = yfujii01
 	email = y-fujii@rhizome-dev.sakura.ne.jp
