@@ -1,26 +1,20 @@
 [user]
-	name = yfujii01
-	email = fancl01+github@gmail.com
-[diff]
-    tool = meld
-[difftool "default-difftool"]
-    cmd = meld $LOCAL $REMOTE
-[merge]
-	tool = meld
-[mergetool "default-mergetool"]
-	cmd = meld $LOCAL $BASE $REMOTE --auto-merge
+    name = yfujii01
+    email = fancl01+github@gmail.com
 [alias]
     a = add .
     c = commit
     p = push origin HEAD
-    d = difftool -y -d -t default-difftool
-    m = mergetool -y -t default-mergetool
+    dm = difftool -t meld -y -d # -d があると -y は意味ない
+    dv = difftool -t vimdiff
+    dvd = difftool -t vimdiff -d # -d つけると変更ファイルの一覧が見える(ただしそこからdiffとって変更はできない)
+    # dv = difftool -t vimdiff -y # -y をつけると複数変更がある場合に終了できなくて困る
     s = status --short
-    # k = !gitk --all --date-order --simplify-by-decoration
-    k = !gitk --all --date-order
-    l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
+    k = !gitk --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
+    l = log --oneline --graph --decorate --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
+    conf = config -l
 [core]
-	# editor = code --wait -new-window
-	editor = 'vim' -c 'set fenc=utf-8'
-	quotepath = false
-	autocrlf = false
+    ## editor = code --wait -new-window
+    editor = vim
+    quotepath = false
+    autocrlf = false
