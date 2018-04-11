@@ -3,13 +3,13 @@
 	email = y-fujii@rhizome-dev.sakura.ne.jp
 [diff]
     tool = default-difftool
-    tool = vim
+    # tool = vim
 [difftool "default-difftool"]
     path = D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe
     cmd = \"D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe\" -f \"*.*\" -e -u -r \"$LOCAL\" \"$REMOTE\"
-[difftool "vim"]
-    path = vimdiff
-    # cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
+# [difftool "vim"]
+#     path = vimdiff
+#     # cmd = vimdiff \"$LOCAL\" \"$REMOTE\"
 [merge]
     tool = default-mergetool
 [mergetool "default-mergetool"]
@@ -20,14 +20,15 @@
     c = commit
     p = push origin HEAD
     d = difftool -y -d -t default-difftool
-    dv = difftool vimdiff
+    dv = difftool -t vimdiff -y
     m = mergetool -y -t default-mergetool
     s = status --short
     # k = !gitk --all --date-order --simplify-by-decoration
     k = !gitk --all --date-order
-    l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
+    l = log --oneline --graph --decorate --all --date-order
+    # l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
 [core]
-	# editor = code --wait -new-window
-	editor = 'C:/Program Files (x86)/vim/vim80/vim.exe' -c 'set fenc=utf-8'
+	## editor = code --wait -new-window
+	editor = vim
 	quotepath = false
 	autocrlf = false
