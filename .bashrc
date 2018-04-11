@@ -1,20 +1,16 @@
-echo 'キュイ━━━━ン            '
-echo '      ∧,,∧              '
-echo '     (・ω・｀) /|       '
-echo '  ／くＴ￣￣二=二] 三二─  '
-echo '  ￣￣￣＼二＼			'
-
-
+if [ -f .aa ]; then
+    cat .aa
+fi
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+# # If not running interactively, don't do anything
+# case $- in
+#     *i*) ;;
+#       *) return;;
+# esac
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -44,9 +40,9 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
 fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
+# case "$TERM" in
+#     xterm-color|*-256color) color_prompt=yes;;
+# esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
@@ -126,7 +122,7 @@ fi
 
 # road password
 if [ -f ~/env_list ]; then
-    . ~/.env_list
+    . ~/env_list
 fi
 
 
