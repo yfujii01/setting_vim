@@ -13,6 +13,7 @@ ln -s ~/dotfiles/.vimrc         ~/.vimrc
 ## デプロイ方法(win)
 cmdで実行
 cd /d %HOMEPATH%"
+del .aa           && mklink .aa           dotfiles\.aa      
 del .bashrc       && mklink .bashrc       dotfiles\.bashrc      
 del .bash_aliases && mklink .bash_aliases dotfiles\.bash_aliases
 del .bash_profile && mklink .bash_profile dotfiles\.bash_profile
