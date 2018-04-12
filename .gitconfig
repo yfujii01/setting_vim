@@ -5,7 +5,7 @@
     a = add .
     c = commit
     p = push origin HEAD
-    dm = difftool -t meld -y -d # -d があると -y は意味ない
+    d = difftool -t meld -y -d # -d があると -y は意味ない
     dv = difftool -t vimdiff
     dvd = difftool -t vimdiff -d # -d つけると変更ファイルの一覧が見える(ただしそこからdiffとって変更はできない)
     # dv = difftool -t vimdiff -y # -y をつけると複数変更がある場合に終了できなくて困る
@@ -18,3 +18,6 @@
     editor = vim
     quotepath = false
     autocrlf = false
+#
+# git remote add origin git@gitlab.com:yfujii01/dotfiles.git
+#
