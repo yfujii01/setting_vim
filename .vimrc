@@ -49,8 +49,9 @@ set diffopt=filler,context:10000
 " ==========================
 " 使用するプラグイン
 " ==========================
+" ファイルを表示
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
-NeoBundle 'vim-scripts/dbext.vim', '18.0'
+
 
  call neobundle#end()
 
