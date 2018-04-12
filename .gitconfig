@@ -1,6 +1,6 @@
 [user]
-	name = yfujii01
-	email = y-fujii@rhizome-dev.sakura.ne.jp
+    name = yfujii01
+    email = y-fujii@rhizome-dev.sakura.ne.jp
 [diff]
     tool = default-difftool
     # tool = vim
@@ -28,7 +28,10 @@
     l = log --oneline --graph --decorate --all --date-order
     # l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
 [core]
-	## editor = code --wait -new-window
-	editor = vim
-	quotepath = false
-	autocrlf = false
+    ## editor = code --wait -new-window
+    editor = vim
+    quotepath = false
+    autocrlf = false
+#
+# git remote add origin git@gitlab.com:yfujii01/dotfiles.git
+#
