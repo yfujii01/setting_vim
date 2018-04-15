@@ -17,47 +17,47 @@ set diffopt=filler,context:10000
 
 
 
-" =============================================================
-" プラグイン設定(↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓)
-" =============================================================
-" ==========================
-" プラグイン設定(事前準備)
-" ==========================
-" mkdir %userprofile%\.vim\bundle
-" cd %userprofile%\.vim\bundle
-" git clone git://github.com/Shougo/neobundle.vim
+" " =============================================================
+" " プラグイン設定(↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓)
+" " =============================================================
+" " ==========================
+" " プラグイン設定(事前準備)
+" " ==========================
+" " mkdir %userprofile%\.vim\bundle
+" " cd %userprofile%\.vim\bundle
+" " git clone git://github.com/Shougo/neobundle.vim
 
-" ==========================
-" プラグイン設定
-" ==========================
-:source $VIMRUNTIME/mswin.vim
- " Note: Skip initialization for vim-tiny or vim-small.
- if 0 | endif
+" " ==========================
+" " プラグイン設定
+" " ==========================
+" " :source $VIMRUNTIME/mswin.vim
+"  " Note: Skip initialization for vim-tiny or vim-small.
+"  if 0 | endif
 
- if has('vim_starting')
-   if &compatible
-     set nocompatible               
-   endif
+"  if has('vim_starting')
+"    if &compatible
+"      set nocompatible               
+"    endif
 
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
+"    set runtimepath+=~/.vim/bundle/neobundle.vim/
+"  endif
 
- call neobundle#begin(expand('~/.vim/bundle/'))
+"  call neobundle#begin(expand('~/.vim/bundle/'))
 
- NeoBundleFetch 'Shougo/neobundle.vim'
+"  NeoBundleFetch 'Shougo/neobundle.vim'
 
-" ==========================
-" 使用するプラグイン
-" ==========================
-" ファイルを表示
-NeoBundle 'https://github.com/Shougo/unite.vim.git'
+" " ==========================
+" " 使用するプラグイン
+" " ==========================
+" " ファイルを表示
+" NeoBundle 'https://github.com/Shougo/unite.vim.git'
 
 
- call neobundle#end()
+"  call neobundle#end()
 
- filetype plugin indent on
+"  filetype plugin indent on
 
- NeoBundleCheck
-" =============================================================
-" プラグイン設定(↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑)
-" =============================================================
+"  NeoBundleCheck
+" " =============================================================
+" " プラグイン設定(↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑)
+" " =============================================================
