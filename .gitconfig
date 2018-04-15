@@ -1,20 +1,23 @@
 [user]
-  email = fancl01+github@gmail.com
-  name = yfujii
+    name = yfujii01
+    email = fancl01+github@gmail.com
 [alias]
-  d = difftool -y -d -t meld
-  s = status --short
-  k = !gitk --all --date-order --simplify-by-decoration
-  l = log --oneline --graph --decorate --all --date-order --simplify-by-decoration
+    a = add .
+    c = commit
+    p = push origin HEAD
+    # d = difftool -t meld -y -d # -d があると -y は意味ない
+    dv = difftool -t vimdiff
+    dvd = difftool -t vimdiff -d # -d つけると変更ファイルの一覧が見える(ただしそこからdiffとって変更はできない)
+    # dv = difftool -t vimdiff -y # -y をつけると複数変更がある場合に終了できなくて困る
+    s = status --short
+    k = !gitk --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
+    l = log --oneline --graph --decorate --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
+    conf = config -l
 [core]
-  editor = vim
-  quotepath = false
-  autocrlf = false
-[diff]
-  tool = meld
-[difftool "meld"]
-  cmd = meld $LOCAL $REMOTE
-[merge]
-  tool = meld
-[mergetool "meld"]
-  cmd = meld $LOCAL $BASE $REMOTE --auto-merge
+    ## editor = code --wait -new-window
+    editor = vim
+    quotepath = false
+    autocrlf = false
+#
+# git remote add origin git@gitlab.com:yfujii01/dotfiles.git
+#
