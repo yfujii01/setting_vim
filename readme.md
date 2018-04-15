@@ -4,7 +4,7 @@
 mv .bash_profle dotfiles/
 
 ln -s ~/dotfiles/.aa            ~/.aa
-ln -s ~/dotfiles/.bash_profle   ~/.bash_profle
+ln -s ~/dotfiles/.bash_profile   ~/.bash_profile
 ln -s ~/dotfiles/.bash_aliases  ~/.bash_aliases
 ln -s ~/dotfiles/.bashrc        ~/.bashrc
 ln -s ~/dotfiles/.gitconfig     ~/.gitconfig
