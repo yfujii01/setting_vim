@@ -68,12 +68,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# パスワードなどの環境変数を読み込む
-if [ -f ~/env_list ]; then
-    . ~/env_list
-fi
-
-
 
 # git-bash style
 if [ -f /etc/bash_completion ]; then
