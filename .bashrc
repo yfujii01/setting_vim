@@ -1,3 +1,5 @@
+# pi
+
 # 起動時AAの読み込み
 if [ -f ~/.aa ]; then
     cat ~/.aa
@@ -65,12 +67,6 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-
-# パスワードなどの環境変数を読み込む
-if [ -f ~/env_list ]; then
-    . ~/env_list
-fi
-
 
 
 # git-bash style
