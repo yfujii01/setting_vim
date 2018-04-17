@@ -1,3 +1,5 @@
+# mint
+
 # 起動時AAの読み込み
 if [ -f ~/.aa ]; then
     cat ~/.aa

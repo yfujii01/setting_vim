@@ -1,3 +1,4 @@
+" mint
 syntax on
 colorscheme evening
 
