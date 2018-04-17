@@ -5,14 +5,15 @@ alias sshpi='ssh pi@0.tcp.ap.ngrok.io -p'
 alias g='grep'
 
 #git関連
+alias gf='git fetch'
 alias gs='git status --short'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push origin HEAD'
 alias gd='git diff --name-only '
-alias gdt='git difftool -y -d -t default-difftool'
+alias gdw='git difftool -y -d -t default-difftool'
+alias gdm='git difftool -t meld -d'
 alias gdv='git difftool -t vimdiff'
-alias gdvd='git difftool -t vimdiff -d' # -d つけると変更ファイルの一覧が見える(ただしそこからdiffとって変更はできない)
 alias gk='gitk --all --date-order' # --simplify-by-decoration をつけると個別のコミットが隠れる
 alias gl='git log --oneline --graph --decorate --all --date-order' # --simplify-by-decoration をつけると個別のコミットが隠れる
 alias gconf='git config -l'
