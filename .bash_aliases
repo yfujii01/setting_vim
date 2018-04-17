@@ -6,6 +6,7 @@ alias sshpi='ssh pi@0.tcp.ap.ngrok.io -p'
 alias g='grep'
 
 #git関連
+alias gf='git fetch'
 alias gs='git status --short'
 alias ga='git add .'
 alias gc='git commit'
