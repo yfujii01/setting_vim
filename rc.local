@@ -12,7 +12,7 @@
 # By default this script does nothing.
 
 #####################################
-# 起動時処理
+# 起動時処理(pi)
 #####################################
 
 # Print the IP address
@@ -29,5 +29,13 @@ fi
   --log=stdout \
   --region=ap \
   > /home/pi/ngrok.log) &
+
+
+# slackbotの起動
+cd /home/pi/work/git/slackbot-java
+nohup gradle run > Output.log 2>&1&
+
+
+cd
 
 exit 0
