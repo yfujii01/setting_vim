@@ -17,19 +17,32 @@
     a = add .
     c = commit
     p = push origin HEAD
-    d = difftool -y -d -t default-difftool
+    dt = difftool -y -d -t default-difftool
     dv = difftool -t vimdiff
-    dvd = difftool -t vimdiff -d # -d ����ƕύX�t�@�C���̈ꗗ��������(��������������diff�Ƃ��ĕύX�͂ł��Ȃ�)
+    dvd = difftool -t vimdiff -d # -d つけると変更ファイルの一覧が見える(ただしそこからdiffとって変更はできない)
+    d = diff --name-only 
     m = mergetool -y -t default-mergetool
     s = status --short
-    k = !gitk --all --date-order # --simplify-by-decoration ������ƌʂ̃R�~�b�g���B���
-    l = log --oneline --graph --decorate --all --date-order # --simplify-by-decoration ������ƌʂ̃R�~�b�g���B���
+    k = !gitk --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
+    l = log --oneline --graph --decorate --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
     conf = config -l
 [core]
     ## editor = code --wait -new-window
     editor = vim
     quotepath = false
     autocrlf = false
+##############################################################################
+# my help
+##############################################################################
 #
+# 新しいリポジトリを紐づける際の参考(リポジトリは無い場合、勝手に作ってくれる)
 # git remote add origin git@gitlab.com:yfujii01/dotfiles.git
+#
+#
+# 別ブランチから1ファイルだけ持ってくる
+# git checkout ブランチ名 ファイル名
+#
+#
+# addした(stagingにあげた)後にdiffしたい場合
+# git diff --cached
 #
