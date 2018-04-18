@@ -27,8 +27,9 @@
     # l = log --oneline --graph --decorate --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
     # conf = config -l
 [core]
-    ## editor = code --wait -new-window
-    editor = vim
+    # editor = code --wait -new-window
+    editor = 'C:/Program Files (x86)/vim/vim80/gvim.exe'
+    #editor = vim
     quotepath = false
     autocrlf = false
 ##############################################################################
