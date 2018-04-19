@@ -2,6 +2,7 @@ syntax on
 colorscheme evening
 
 " set encoding=japan
+set encoding=utf-8
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 " set fileencodings=sjis,utf-8,iso-2022-jp,euc-jp
 

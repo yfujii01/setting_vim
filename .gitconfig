@@ -12,8 +12,8 @@
     # k = !gitk --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
 [core]
     # editor = code --wait -new-window
-    editor = 'C:/Program Files (x86)/vim/vim80/vim.exe'
-    #editor = 'vim'
+    # editor = 'C:/Program Files (x86)/vim/vim80/vim.exe'
+    editor = 'vim'
     quotepath = false
     autocrlf = false
 ##############################################################################
