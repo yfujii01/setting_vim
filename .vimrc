@@ -51,7 +51,7 @@ set diffopt=filler,context:10000
 " ==========================
 " ファイルを表示
 NeoBundle 'https://github.com/Shougo/unite.vim.git'
-
+NeoBundle 'tpope/vim-commentary'
 
  call neobundle#end()
 
