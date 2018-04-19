@@ -3,7 +3,6 @@
     email = y-fujii@rhizome-dev.sakura.ne.jp
 [diff]
     tool = default-difftool
-    # tool = vim
 [difftool "default-difftool"]
     path = D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe
     cmd = \"D:/fujii/tool/winmerge-2.14.0-jp-148-x64-exe/WinMerge/WinMergeU.exe\" -f \"*.*\" -e -u -r \"$LOCAL\" \"$REMOTE\"
@@ -12,7 +11,6 @@
     # k = !gitk --all --date-order # --simplify-by-decoration をつけると個別のコミットが隠れる
 [core]
     # editor = code --wait -new-window
-    # editor = 'C:/Program Files (x86)/vim/vim80/vim.exe'
     editor = 'vim'
     quotepath = false
     autocrlf = false
