@@ -15,5 +15,8 @@ set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 " vimdiff 差分があればその前後n行を表示する
 set diffopt=filler,context:10000
 
-
-
+set tabstop=4
+"set list "空白の可視化(微妙)
+"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set title
+set smartindent
