@@ -18,5 +18,5 @@ set diffopt=filler,context:10000
 set tabstop=4
 "set list "空白の可視化(微妙)
 "set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-set title
+"set title
 set smartindent
