@@ -6,6 +6,8 @@ alias g='grep'
 
 alias volume='amixer sset Speaker'
 
+alias e='emacs'
+
 #git関連
 alias gf='git fetch'
 alias gs='git status --short'
