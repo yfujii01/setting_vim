@@ -21,14 +21,4 @@ if [ "$_IP" ]; then
   printf "My IP address is %s\n" "$_IP"
 fi
 
-# ngrokの起動
-#sh /home/pi/work/run_after_boot.sh
-#(sleep 10 &&
-#  ngrok start --all \
-#  --config=/home/pi/.ngrok2/ngrok.yml \
-#  --log=stdout \
-#  --region=ap \
-#  > /home/pi/ngrok.log) &
-
-
 exit 0
