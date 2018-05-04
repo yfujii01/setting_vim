@@ -1,9 +1,14 @@
 *myhelp.txt*
 
+myhelpを編集する <:set modifiable>
+操作ウインドウを切り替える <CTRL-W,CTRL-W>
 ジャンプ <CTRL-]> 
 戻ってくる <CTRL-O>
 
-|help-writing| ヘルプファイルの書き方
-|hyuki-latex| LaTeX用メモ
-
-vim:tw=78:fo=tcq2:isk=!-~,^*,^\|,^\":ts=8:ft=help:norl:
+-------------------------
+jedi(python)
+-------------------------
+ジャンプ(jedi) <leader-d>
+変数リネーム <leader-r>
+pydoc表示 <K>
+補完開始 <CTRL-Space>
