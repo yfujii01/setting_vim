@@ -13,8 +13,13 @@ sudo ln -s ~/dotfiles/rc.local  /etc/rc.local
 
 
 ## vim の myhelpについて
-ソフトリンクでは読み込めないのでハードリンクを貼ること
+シンボリックリンクでは読み込めないのでハードリンクを貼ること
 ln myhelp.txt ~/.vim/doc/myhelp.txt
+
+
+## vim の プラグインについて
+.vimrcに設定方法が書いてあるので従うこと
+tomlファイルについては、dotfilesで管理したいのでリンクを貼ること
 
 
 ## デプロイ方法(win)
