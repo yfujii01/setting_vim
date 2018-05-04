@@ -1,6 +1,6 @@
 alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias la='ls -A1'
+alias l='ls -1'
 alias sshpi='ssh pi@0.tcp.ap.ngrok.io -p'
 alias g='grep'
 
@@ -25,3 +25,6 @@ alias gconf='git config -l'
 alias gsd='echo "------ git status ------";gs;echo "------ git diff --name-only ------";gd'
 alias gac='git add .;git commit'
 alias gacp='git add .;git commit;git push origin HEAD'
+
+# 全てのリモートブランチをローカルに作成する
+alias gba='for remote in `git branch -r`; do if [ $remote != "origin/HEAD" ] && [ $remote != "->" ]; then git branch --track ${remote#origin/} $remote; fi done'
