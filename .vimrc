@@ -23,6 +23,25 @@ set tabstop=4
 "set smartindent
 
 
+"myhelp==========================
+helptags $HOME/.vim/doc/
+"
+"使い方
+":help myhelp
+"
+"設定方法
+"~/.vim/doc/myhelp.txt
+"-------------------
+"*myhelp.txt*
+" 
+" ジャンプ <CTRL-]>
+" ・
+" ・
+" ・
+"-------------------
+"myhelp==========================
+
+
 "start dein SetUp Memo ==============================================
 " cd ~
 " mkdir ~/.cache

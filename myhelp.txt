@@ -1,0 +1,9 @@
+*myhelp.txt*
+
+ジャンプ <CTRL-]> 
+戻ってくる <CTRL-O>
+
+|help-writing| ヘルプファイルの書き方
+|hyuki-latex| LaTeX用メモ
+
+vim:tw=78:fo=tcq2:isk=!-~,^*,^\|,^\":ts=8:ft=help:norl:
