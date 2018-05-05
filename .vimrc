@@ -1,49 +1,44 @@
+"===============================
+"起動時設定
+"===============================
+"エディター色
 syntax on
 colorscheme murphy
 
-" set encoding=japan
+"エンコード
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
-" set fileencodings=sjis,utf-8,iso-2022-jp,euc-jp
 
+"行番号
 set number
 
-" " vimdiffの色設定
-" hi DiffAdd    ctermfg=black ctermbg=2
-" hi DiffChange ctermfg=black ctermbg=3
-" hi DiffDelete ctermfg=black ctermbg=6
-" hi DiffText   ctermfg=black ctermbg=7
-
-" vimdiff 差分があればその前後n行を表示する
-"set diffopt=filler,context:10000
-
+"タブの間隔
 set tabstop=4
-"set list "空白の可視化(微妙)
-"set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
-"set title
-"set smartindent
 
 " 検索結果をハイライト
 set hlsearch
 
+
 "===============================
 "独自キーマッピング
 "===============================
-"------------------------------
+"----
 "noremap(ノーマルモード＋ビジュアルモード)
-"------------------------------
+"----
 noremap j gj
 noremap k gk
 
-
-"------------------------------
+"----
 "nnoremap(ノーマルモード)
-"------------------------------
+"----
 "検索結果ハイライトを消す
 nnoremap <F3> :noh<CR>
 nnoremap <Down> gj
 nnoremap <Up>   gk
 
-"myhelp==========================
+
+"===============================
+"myhelp
+"===============================
 helptags $HOME/.vim/doc/
 "
 "使い方
@@ -51,18 +46,19 @@ helptags $HOME/.vim/doc/
 "
 "設定方法
 "~/.vim/doc/myhelp.txt
-"-------------------
+"----
 "*myhelp.txt*
 " 
 " ジャンプ <CTRL-]>
 " ・
 " ・
 " ・
-"-------------------
-"myhelp==========================
+"----
 
 
-"start dein SetUp Memo ==============================================
+"===============================
+"start dein SetUp Memo
+"===============================
 " cd ~
 " mkdir ~/.cache
 " mkdir ~/.cache/dein
@@ -73,18 +69,19 @@ helptags $HOME/.vim/doc/
 " cd ~/.cache/
 " mkdir userconfig
 " cd userconfig/
+"
 " vim plugin.toml
-"----------------------------------
+"```
 " plugin.toml
 " [[plugins]]
 "  repo = 'Shougo/dein.vim'
 " 
 " [[plugins]]
 " repo = 'Shougo/vimproc.vim'
-"----------------------------------
+"```
 "
 " vim plugin_lazy.toml
-"----------------------------------
+"```
 " plugin_lazy.toml
 " [[plugins]]
 " repo   = 'Shougo/unite.vim'
@@ -96,11 +93,13 @@ helptags $HOME/.vim/doc/
 " [[plugins]]
 " repo = "davidhalter/jedi-vim"
 " on_ft = ['python']
-"----------------------------------
-"end   dein SetUp Memo ==============================================
+"```
 
 
-"dein Scripts-----------------------------
+
+"===============================
+"dein Scripts
+"===============================
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -139,10 +138,12 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-"End dein Scripts-------------------------
 
 
+
+"===============================
 "プラグインオプション
+"===============================
 " vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
 let g:indent_guides_enable_on_vim_startup = 1
 
