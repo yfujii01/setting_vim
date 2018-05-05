@@ -1,5 +1,10 @@
 [[plugins]]
- repo = 'Shougo/dein.vim'
+repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
+
+# インデントに色を付けて見やすくする
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
