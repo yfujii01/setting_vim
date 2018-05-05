@@ -8,3 +8,6 @@ repo = 'Shougo/vimproc.vim'
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
 
+# gitを便利に使う
+[[plugins]]
+repo = 'tpope/vim-fugitive'

@@ -1,9 +1,12 @@
 "===============================
 "起動時設定
 "===============================
-"エディター色
+" 構文毎に文字色を変化させる
 syntax on
-colorscheme murphy
+
+"エディター色
+"colorscheme murphy
+colorscheme desert
 
 "エンコード
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
@@ -11,11 +14,66 @@ set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 "行番号
 set number
 
+" 行番号の色
+highlight LineNr ctermfg=darkyellow
+
 "タブの間隔
 set tabstop=4
 
 " 検索結果をハイライト
 set hlsearch
+
+" スワップファイルは使わない
+set noswapfile
+
+" コマンドラインに使われる画面上の行数
+"set cmdheight=2
+
+" エディタウィンドウの末尾から2行目にステータスラインを常時表示させる
+set laststatus=2
+
+" ステータス行に表示させる情報の指定
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+""""""""""""""""""""""""""""""
+" 挿入モード時、ステータスラインの色を変更
+""""""""""""""""""""""""""""""
+let g:hi_insert = 'highlight StatusLine guifg=darkblue guibg=darkyellow gui=none ctermfg=blue ctermbg=yellow cterm=none'
+
+if has('syntax')
+  augroup InsertHook
+    autocmd!
+    autocmd InsertEnter * call s:StatusLine('Enter')
+    autocmd InsertLeave * call s:StatusLine('Leave')
+  augroup END
+endif
+
+let s:slhlcmd = ''
+function! s:StatusLine(mode)
+  if a:mode == 'Enter'
+    silent! let s:slhlcmd = 'highlight ' . s:GetHighlight('StatusLine')
+    silent exec g:hi_insert
+  else
+    highlight clear StatusLine
+    silent exec s:slhlcmd
+  endif
+endfunction
+
+function! s:GetHighlight(hi)
+  redir => hl
+  exec 'highlight '.a:hi
+  redir END
+  let hl = substitute(hl, '[\r\n]', '', 'g')
+  let hl = substitute(hl, 'xxx', '', '')
+  return hl
+endfunction
+
+" コマンドラインモードで<Tab>キーによるファイル名補完を有効にする
+set wildmenu
+
+" 入力中のコマンドを表示する
+set showcmd
+
 
 
 "===============================
@@ -144,6 +202,12 @@ endif
 "===============================
 "プラグインオプション
 "===============================
-" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+"vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
+" nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
+
+
+"ステータス行に現在のgitブランチを表示する
+" tpope/vim-fugitive
+set statusline+=%{fugitive#statusline()}
