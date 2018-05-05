@@ -4,24 +4,43 @@
 " 構文毎に文字色を変化させる
 syntax on
 
-"エディター色
-"colorscheme murphy
+"カラースキーマ
 colorscheme desert
+"colorscheme molokai
+
+"vimを256色対応(なくても同じっぽい)
+set t_Co=256
+
+
+highlight LineNr ctermfg=darkyellow
 
 "エンコード
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 
+"マルチバイトの文字を崩れずに表示
+set ambiwidth=double
+
 "行番号
 set number
-
-" 行番号の色
-highlight LineNr ctermfg=darkyellow
 
 "タブの間隔
 set tabstop=4
 
+" インクリメンタルサーチ. １文字入力毎に検索を行う
+set incsearch 
+
 " 検索結果をハイライト
 set hlsearch
+" 検索パターンに大文字小文字を区別しない
+set ignorecase 
+" 検索パターンに大文字を含んでいたら大文字小文字を区別する
+set smartcase 
+
+" カーソルの左右移動で行末から次の行の行頭への移動が可能になる
+set whichwrap=b,s,h,l,<,>,[,],~ 
+
+" カーソルラインをハイライト
+set cursorline 
 
 " スワップファイルは使わない
 set noswapfile
@@ -34,6 +53,22 @@ set laststatus=2
 
 " ステータス行に表示させる情報の指定
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
+"クリップボードを使う
+set clipboard=unnamed
+
+" マウスの有効化
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse=xterm2
+    endif
+endif
+
 
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
@@ -88,30 +123,10 @@ noremap k gk
 "----
 "nnoremap(ノーマルモード)
 "----
-"検索結果ハイライトを消す
-nnoremap <F3> :noh<CR>
 nnoremap <Down> gj
 nnoremap <Up>   gk
-
-
-"===============================
-"myhelp
-"===============================
-helptags $HOME/.vim/doc/
-"
-"使い方
-":help myhelp
-"
-"設定方法
-"~/.vim/doc/myhelp.txt
-"----
-"*myhelp.txt*
-" 
-" ジャンプ <CTRL-]>
-" ・
-" ・
-" ・
-"----
+" ESCキー2度押しでハイライトの切り替え
+nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 
 "===============================
@@ -196,18 +211,3 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
-
-
-
-"===============================
-"プラグインオプション
-"===============================
-"vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
-" nathanaelkane/vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
-
-
-
-"ステータス行に現在のgitブランチを表示する
-" tpope/vim-fugitive
-set statusline+=%{fugitive#statusline()}
