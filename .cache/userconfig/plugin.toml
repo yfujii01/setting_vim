@@ -37,3 +37,6 @@ repo = 'reireias/vim-cheatsheet'
 hook_add = '''
 let g:cheatsheet#cheat_file = '~/.vimcheatsheet.md'
 '''
+# マルチカーソル
+[[plugins]]
+repo = 'terryma/vim-multiple-cursors'

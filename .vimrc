@@ -128,7 +128,12 @@ nnoremap <Up>   gk
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
+nnoremap <leader>z :set wrap<CR>
+nnoremap <leader>zz :set nowrap<CR>
+
 nnoremap <leader>b :NERDTree<CR>
+
+
 
 "===============================
 "start dein SetUp Memo
