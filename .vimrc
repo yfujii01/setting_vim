@@ -128,6 +128,7 @@ nnoremap <Up>   gk
 " ESCキー2度押しでハイライトの切り替え
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
+nnoremap <leader>b :NERDTree<CR>
 
 "===============================
 "start dein SetUp Memo
@@ -184,7 +185,8 @@ if &runtimepath !~# '/dein.vim'
   if !isdirectory(s:dein_repo_path)
     execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_path
   endif
-  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_path, ':p')
+  " execute 'set runtimepath^=' . fnamemodify(s:dein_repo_path, ':p')
+  execute 'set runtimepath^=' . s:dein_repo_path
 endif
 
 if dein#load_state(s:dein_path)

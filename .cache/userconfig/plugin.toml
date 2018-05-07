@@ -26,10 +26,10 @@ repo = 'tomtom/tcomment_vim'
 # プロジェクトツリーを表示する
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-
-# プロジェクトツリーにgit statusを表示する
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
+#隠しファイルをデフォルトで表示
+hook_add = '''
+let NERDTreeShowHidden = 1
+'''
 
 # 自分用チートシートを表示する(:Cheat)
 [[plugins]]
