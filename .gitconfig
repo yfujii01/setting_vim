@@ -1,6 +1,5 @@
 [user]
     name = yfujii01
-    email = y-fujii@rhizome-dev.sakura.ne.jp
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
@@ -15,10 +14,7 @@
 
 [alias]
     winmerge = mergetool -y -t WinMerge
-    # a = add .
-    # c = commit
-    # p = push origin HEAD
-    # dt = difftool -y -d -t default-difftool
+
     # dv = difftool -t vimdiff
     # dvd = difftool -t vimdiff -d # -d つけると変更ファイルの一覧が見える(ただしそこからdiffとって変更はできない)
     # d = diff --name-only 
