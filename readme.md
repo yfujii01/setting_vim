@@ -30,3 +30,7 @@ del .bash_aliases && mklink .bash_aliases dotfiles\.bash_aliases
 del .bash_profile && mklink .bash_profile dotfiles\.bash_profile
 del .vimrc        && mklink .vimrc        dotfiles\.vimrc       
 del .gitconfig    && mklink .gitconfig    dotfiles\.gitconfig   
+
+ln .cache/userconfig/plugin.toml    ~/.cache/userconfig/plugin.toml  
+ln .cache/userconfig/plugin_lazy.toml    ~/.cache/userconfig/plugin_lazy.toml
+ln .vimcheatsheet.md    ~/.vimcheatsheet.md
