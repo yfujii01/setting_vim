@@ -9,7 +9,17 @@ ln -s ~/dotfiles/.bash_aliases  ~/.bash_aliases
 ln -s ~/dotfiles/.bashrc        ~/.bashrc
 ln -s ~/dotfiles/.gitconfig     ~/.gitconfig
 ln -s ~/dotfiles/.vimrc         ~/.vimrc
-sudo ln -s ~/dotfiles/rc.local  /etc/rc.local
+
+
+## vim の myhelpについて
+シンボリックリンクでは読み込めないのでハードリンクを貼ること
+ln myhelp.txt ~/.vim/doc/myhelp.txt
+
+
+## vim の プラグインについて
+.vimrcに設定方法が書いてあるので従うこと
+tomlファイルについては、dotfilesで管理したいのでリンクを貼ること
+
 
 ## デプロイ方法(win)
 cmdで実行

@@ -1,3 +1,6 @@
+# 対話型ではない接続の場合はこれ以降を読み込まない
+[ -z "$PS1" ] && return
+
 # 起動時AAの読み込み
 if [ -f ~/.aa ]; then
     cat ~/.aa
@@ -26,6 +29,17 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+#if [ "$color_prompt" = yes ]; then
+#    if [[ ${EUID} == 0 ]] ; then
+#        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
+#    else
+#        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w \$\[\033[00m\] '
+#    fi
+#else
+#    PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
+#fi
+#unset color_prompt force_color_prompt
+
 case "$TERM" in
 xterm*|rxvt*)
     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h \w\a\]$PS1"
@@ -34,6 +48,10 @@ xterm*|rxvt*)
     ;;
 esac
 
+# enable color support of ls and also add handy aliases
+#if [ -x /usr/bin/dircolors ]; then
+#    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#fi
 
 
 if [ -f ~/.bash_aliases ]; then
@@ -50,4 +68,15 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+# git-bash style
+#if [ -f /etc/bash_completion ]; then
+#    . /etc/bash_completion
+#fi
+#if [ -f /etc/bash_completion.d/git-prompt ]; then
+#    export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w$(__git_ps1) \n\[\033[01;34m\]\$\[\033[00m\] '
+#else
+#    export PS1='\[\033[01;32m\]\u@\h\[\033[01;33m\] \w \n\[\033[01;34m\]\$\[\033[00m\] '
+#fi
 

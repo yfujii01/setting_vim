@@ -1,8 +1,12 @@
 alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias la='ls -A1'
+alias l='ls -1'
 alias sshpi='ssh pi@0.tcp.ap.ngrok.io -p'
 alias g='grep'
+
+alias volume='amixer sset Speaker'
+
+alias e='emacs'
 
 #git関連
 alias gf='git fetch'
