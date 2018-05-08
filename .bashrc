@@ -3,7 +3,12 @@
 
 # 起動時AAの読み込み
 if [ -f ~/.aa ]; then
-    cat ~/.aa
+    COMMENT=【`date "+%Y-%m-%d (%a)"`】
+    IFS=">"
+    AA=(`sed -e "s/__DATE__/$COMMENT/g" ~/.aa`)
+    NUM=${#AA[*]}
+    NO=`expr $RANDOM % $NUM`
+    echo ${AA[$NO]}
 fi
 
 HISTCONTROL=ignoreboth
