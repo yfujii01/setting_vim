@@ -15,6 +15,7 @@ set t_Co=256
 highlight LineNr ctermfg=darkyellow
 
 "エンコード
+set encoding=utf-8
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 
 "マルチバイトの文字を崩れずに表示
