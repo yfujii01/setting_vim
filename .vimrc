@@ -198,9 +198,8 @@ endif
 if dein#load_state(s:dein_path)
   call dein#begin(s:dein_path)
 
-  let g:config_dir  = expand('~/.cache/userconfig')
-  let s:toml        = g:config_dir . '/plugin.toml'
-  let s:lazy_toml   = g:config_dir . '/plugin_lazy.toml'
+  let s:toml        = '~/.vim_dein.toml'
+  let s:lazy_toml   = '~/.vim_dein_lazy.toml'
 
   " TOML 読み込み
   call dein#load_toml(s:toml,      {'lazy': 0})
@@ -209,6 +208,7 @@ if dein#load_state(s:dein_path)
   call dein#end()
   call dein#save_state()
 endif
+
 
 
 " Required:

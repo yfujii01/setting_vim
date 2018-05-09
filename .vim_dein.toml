@@ -35,7 +35,7 @@ let NERDTreeShowHidden = 1
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
 hook_add = '''
-let g:cheatsheet#cheat_file = '~/.vimcheatsheet.md'
+let g:cheatsheet#cheat_file = '~/.vim_cheatsheet.md'
 '''
 # マルチカーソル
 [[plugins]]
