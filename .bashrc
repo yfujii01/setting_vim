@@ -20,6 +20,7 @@ shopt -s checkwinsize
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
+# あなたが作業しているchrootを識別する変数を設定します（以下のプロンプトで使用されます）
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
@@ -54,6 +55,7 @@ xterm*|rxvt*)
 esac
 
 # enable color support of ls and also add handy aliases
+# lsのカラーサポートを有効にし、便利なエイリアスを追加する
 #if [ -x /usr/bin/dircolors ]; then
 #    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 #fi
@@ -66,6 +68,9 @@ fi
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
+# プログラム可能な補完機能を有効にします（有効にする必要はありません
+# これが/etc/bash.bashrcと/ etc / profileですでに有効になっている場合
+# sources /etc/bash.bashrc）。
 if ! shopt -oq posix; then
   if [ -f /usr/share/bash-completion/bash_completion ]; then
     . /usr/share/bash-completion/bash_completion
