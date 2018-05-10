@@ -135,48 +135,6 @@ nnoremap <leader>zz :set nowrap<CR>
 nnoremap <leader>b :NERDTree<CR>
 
 
-
-"===============================
-"start dein SetUp Memo
-"===============================
-" cd ~
-" mkdir ~/.cache
-" mkdir ~/.cache/dein
-" cd .cache/dein/
-" wget https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh
-" sh ./installer.sh ~/.cache/dein/
-"
-" cd ~/.cache/
-" mkdir userconfig
-" cd userconfig/
-"
-" vim plugin.toml
-"```
-" plugin.toml
-" [[plugins]]
-"  repo = 'Shougo/dein.vim'
-" 
-" [[plugins]]
-" repo = 'Shougo/vimproc.vim'
-"```
-"
-" vim plugin_lazy.toml
-"```
-" plugin_lazy.toml
-" [[plugins]]
-" repo   = 'Shougo/unite.vim'
-" 
-" [[plugins]]
-" repo      = 'Shougo/neomru.vim'
-" on_source = ['unite.vim']
-" 
-" [[plugins]]
-" repo = "davidhalter/jedi-vim"
-" on_ft = ['python']
-"```
-
-
-
 "===============================
 "dein Scripts
 "===============================
