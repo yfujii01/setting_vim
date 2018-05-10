@@ -1,5 +1,5 @@
 "===============================
-"起動時設定
+"起動時設定(標準機能)
 "===============================
 " 構文毎に文字色を変化させる
 syntax on
@@ -167,8 +167,6 @@ if dein#load_state(s:dein_path)
   call dein#save_state()
 endif
 
-
-
 " Required:
 filetype plugin indent on
 syntax enable
@@ -177,3 +175,26 @@ syntax enable
 if dein#check_install()
   call dein#install()
 endif
+
+"===============================
+"プラグイン設定
+"===============================
+" インデントに色を付けて見やすくする
+" repo = nathanaelkane/vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+
+
+" gitを便利に使う
+" ステータス行に現在のgitブランチを表示する 	
+" repo = 'tpope/vim-fugitive'
+set statusline+=%{fugitive#statusline()}
+
+" プロジェクトツリーを表示する
+" repo = 'scrooloose/nerdtree'
+" 隠しファイルをデフォルトで表示
+let NERDTreeShowHidden = 1
+
+
+" 自分用チートシートを表示する(:Cheat)
+" repo = 'reireias/vim-cheatsheet'
+let g:cheatsheet#cheat_file = '~/.vim_cheatsheet.md'

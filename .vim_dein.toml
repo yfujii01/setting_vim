@@ -7,17 +7,11 @@ repo = 'Shougo/vimproc.vim'
 # インデントに色を付けて見やすくする
 [[plugins]]
 repo = 'nathanaelkane/vim-indent-guides'
-hook_add = '''
-	let g:indent_guides_enable_on_vim_startup = 1
-'''
 
 # gitを便利に使う
 # ステータス行に現在のgitブランチを表示する 	
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-hook_add = '''
-	set statusline+=%{fugitive#statusline()}
-'''
 
 # コメントON/OFFを手軽に実行
 [[plugins]]
@@ -26,17 +20,11 @@ repo = 'tomtom/tcomment_vim'
 # プロジェクトツリーを表示する
 [[plugins]]
 repo = 'scrooloose/nerdtree'
-#隠しファイルをデフォルトで表示
-hook_add = '''
-let NERDTreeShowHidden = 1
-'''
 
 # 自分用チートシートを表示する(:Cheat)
 [[plugins]]
 repo = 'reireias/vim-cheatsheet'
-hook_add = '''
-let g:cheatsheet#cheat_file = '~/.vim_cheatsheet.md'
-'''
+
 # マルチカーソル
 [[plugins]]
 repo = 'terryma/vim-multiple-cursors'
