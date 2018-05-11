@@ -1,19 +1,7 @@
+
 "===============================
 "起動時設定(標準機能)
 "===============================
-" 構文毎に文字色を変化させる
-syntax on
-
-"カラースキーマ
-colorscheme desert
-"colorscheme molokai
-
-"vimを256色対応(なくても同じっぽい)
-set t_Co=256
-
-
-highlight LineNr ctermfg=darkyellow
-
 "エンコード
 set encoding=utf-8
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
@@ -135,6 +123,7 @@ nnoremap <leader>zz :set nowrap<CR>
 nnoremap <leader>b :NERDTree<CR>
 
 
+
 "===============================
 "dein Scripts
 "===============================
@@ -180,6 +169,7 @@ endif
 "プラグイン設定
 "===============================
 " インデントに色を付けて見やすくする
+" ここより前に色設定を変えていると反映されないことがある
 " repo = nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
@@ -198,3 +188,33 @@ let NERDTreeShowHidden = 1
 " 自分用チートシートを表示する(:Cheat)
 " repo = 'reireias/vim-cheatsheet'
 let g:cheatsheet#cheat_file = '~/.vim_cheatsheet.md'
+
+
+" # マルチカーソル
+" [[plugins]]
+" repo = 'terryma/vim-multiple-cursors'
+let g:multi_cursor_select_all_key      = '<f2>'
+
+"===============================
+"カラー設定
+"===============================
+" 構文毎に文字色を変化させる
+syntax on
+
+"カラースキーマ
+colorscheme desert
+"colorscheme molokai
+
+
+"vimを256色対応(なくても同じっぽい)
+set t_Co=256
+
+" vimdiffカラー設定
+:hi DiffAdd    ctermfg=black ctermbg=1
+:hi DiffChange ctermfg=black ctermbg=7
+:hi DiffDelete ctermfg=black ctermbg=7
+:hi DiffText   ctermfg=black ctermbg=1
+
+" 検索ハイライト設定
+highlight LineNr ctermfg=darkyellow
+
