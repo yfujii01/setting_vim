@@ -81,17 +81,23 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 set clipboard=unnamed
 
 " マウスの有効化
-" if has('mouse')
-"     set mouse=a
-"     if has('mouse_sgr')
-"         set ttymouse=sgr
-"     elseif v:version > 703 || v:version is 703 && has('patch632')
-"         set ttymouse=sgr
-"     else
-"         set ttymouse=xterm2
-"     endif
-" endif
+if has('mouse')
+    set mouse=a
+    if has('mouse_sgr')
+        set ttymouse=sgr
+    elseif v:version > 703 || v:version is 703 && has('patch632')
+        set ttymouse=sgr
+    else
+        set ttymouse=xterm2
+    endif
+endif
 
+" 行末の1文字先までカーソルを移動できるように
+set virtualedit=onemore
+
+set formatoptions-=ro
+
+" au FileType * setlocal formatoptions-=ro
 
 """"""""""""""""""""""""""""""
 " 挿入モード時、ステータスラインの色を変更
@@ -163,6 +169,20 @@ if dein#load_state(s:dein_path)
   call dein#load_toml(s:toml,      {'lazy': 0})
   call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
+
+  call dein#add('Shougo/dein.vim')
+  call dein#add('Shougo/vimproc.vim')
+  call dein#add('nathanaelkane/vim-indent-guides') "インデントに色を付けて見やすくする
+  call dein#add('tpope/vim-fugitive')              " ステータス行に現在のgitブランチを表示する
+  call dein#add('tomtom/tcomment_vim') " コメントON/OFFを手軽に実行
+  call dein#add('scrooloose/nerdtree') " プロジェクトツリーを表示する
+  call dein#add('reireias/vim-cheatsheet') " 自分用チートシートを表示する(:Cheat)
+  call dein#add('terryma/vim-multiple-cursors') " マルチカーソル
+  call dein#add('deris/vim-rengbang') " 連番作成
+  call dein#add('h1mesuke/vim-alignta') " フォーマット
+  call dein#add('gosukiwi/vim-atom-dark') "カラースキーマ
+
+
   call dein#end()
   call dein#save_state()
 endif
@@ -181,29 +201,29 @@ endif
 "===============================
 " インデントに色を付けて見やすくする
 " ここより前に色設定を変えていると反映されないことがある
-" repo = nathanaelkane/vim-indent-guides
+" nathanaelkane/vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
 
 " gitを便利に使う
 " ステータス行に現在のgitブランチを表示する 	
-" repo = 'tpope/vim-fugitive'
+" 'tpope/vim-fugitive'
 set statusline+=%{fugitive#statusline()}
 
 " プロジェクトツリーを表示する
-" repo = 'scrooloose/nerdtree'
+" 'scrooloose/nerdtree'
 " 隠しファイルをデフォルトで表示
 let NERDTreeShowHidden = 1
 
 
 " 自分用チートシートを表示する(:Cheat)
-" repo = 'reireias/vim-cheatsheet'
+" 'reireias/vim-cheatsheet'
 let g:cheatsheet#cheat_file = '~/.vimCheat.md'
 
 
 " # マルチカーソル
 " [[plugins]]
-" repo = 'terryma/vim-multiple-cursors'
+" 'terryma/vim-multiple-cursors'
 let g:multi_cursor_select_all_key      = '<f2>'
 
 

@@ -26,7 +26,19 @@ nnoremap d "_d
 nnoremap D "_D
 
 " Enterで改行
-nmap <CR> O<Esc><Down>
+nnoremap <CR> i<CR><Esc>
+
+" 行削除(ヤンクしない)
+nnoremap <C-y> "_dd
+
+" ファイル保存系操作
+nnoremap <leader>w :w<CR>
+nnoremap <leader>w! :w!<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>q! :q!<CR>
+
+" .vimrc再読込
+nnoremap <leader>r :source ~/.vimrc<CR>
 
 " ESCキー2度押しでハイライトの切り替え
 " nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
@@ -41,11 +53,18 @@ nnoremap <leader>x :set nowrap<CR>
 " プロジェクトツリー表示(プラグイン)
 nnoremap <leader>b :NERDTree<CR>
 
-" Shift+方向キーでvisualモード開始
+" Shift+キーでvisualモード開始
 nnoremap <S-Up> v<Up>
 nnoremap <S-Left> v<Left>
 nnoremap <S-Right> v<Right>
 nnoremap <S-Down> v<Down>
+nnoremap <S-Home> v<Home>
+nnoremap <S-End> v<End>
+nnoremap <S-C-Home> v<C-Home>
+nnoremap <S-C-End> v<C-End>
+
+" Endで改行コードまで選択
+nnoremap <End> <End><Right>
 
 " スクロール
 nnoremap <C-Up> <C-y>
@@ -56,7 +75,6 @@ nnoremap <C-a> ggvG$
 
 " 置換
 nnoremap <C-h> :%s/前/後/g 
-
 
 " フォーマット(ファイルによって挙動を変える)
 au FileType python nnoremap <C-l> :Autopep8<CR> 
