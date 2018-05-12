@@ -37,3 +37,7 @@ repo = 'deris/vim-rengbang'
 [[plugins]]
 repo = 'h1mesuke/vim-alignta'
 
+# カラー
+[[plugins]]
+repo = 'gosukiwi/vim-atom-dark'
+

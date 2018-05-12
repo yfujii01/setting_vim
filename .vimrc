@@ -15,6 +15,31 @@ set number
 "タブの間隔
 set tabstop=4
 
+" 行末のスペースを可視化
+" set list
+" set listchars=eol:\ ,trail:-
+" set listchars=tab;\ \ ,eol:\ ,trail:-
+
+"タブ、空白、改行の可視化
+set list
+set listchars=tab:>.,trail:_,eol:↲,extends:>,precedes:<,nbsp:%
+
+"全角スペースをハイライト表示
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
+endfunction
+   
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme       * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter * match ZenkakuSpace /　/
+    augroup END
+    call ZenkakuSpace()
+endif
+
+
+
 "前回のカーソル位置を復元
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -181,6 +206,7 @@ let g:cheatsheet#cheat_file = '~/.vimCheat.md'
 " repo = 'terryma/vim-multiple-cursors'
 let g:multi_cursor_select_all_key      = '<f2>'
 
+
 "===============================
 "カラー設定
 "===============================
@@ -188,22 +214,23 @@ let g:multi_cursor_select_all_key      = '<f2>'
 syntax on
 
 "カラースキーマ
-colorscheme desert
+" colorscheme desert
 "colorscheme molokai
+colorscheme atom-dark
 
-
-"vimを256色対応(なくても同じっぽい)
+" よくわからないが一度配色設定を変更後に256に戻すことで正しい256色設定になる
+set t_Co=25
 set t_Co=256
 
 " vimdiffカラー設定
-:hi DiffAdd    ctermfg=black ctermbg=1
-:hi DiffChange ctermfg=black ctermbg=7
-:hi DiffDelete ctermfg=black ctermbg=7
-:hi DiffText   ctermfg=black ctermbg=1
-
-" 検索ハイライト設定
-highlight LineNr ctermfg=darkyellow
-
+" :hi DiffAdd    ctermfg=black ctermbg=1
+" :hi DiffChange ctermfg=black ctermbg=7
+" :hi DiffDelete ctermfg=black ctermbg=7
+" :hi DiffText   ctermfg=black ctermbg=1
+"
+" " 検索ハイライト設定
+" highlight LineNr ctermfg=darkyellow
+"
 
 "===============================
 " キーマッピング設定を読み込む
