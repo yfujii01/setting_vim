@@ -1,6 +1,7 @@
 [user]
     name = yfujii01
-    email = y-fujii@rhizome-dev.sakura.ne.jp
+    # email = y-fujii@rhizome-dev.sakura.ne.jp
+    email = fancl01@gmail.com
 [diff]
     tool = default-difftool
 [difftool "default-difftool"]
