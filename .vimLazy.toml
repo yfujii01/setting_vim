@@ -1,0 +1,23 @@
+[[plugins]]
+repo   = 'Shougo/unite.vim'
+
+[[plugins]]
+repo      = 'Shougo/neomru.vim'
+on_source = ['unite.vim']
+
+[[plugins]]
+repo = "davidhalter/jedi-vim"
+on_ft = ['python']
+
+[[plugins]]
+repo = "cespare/vim-toml"
+on_ft = ['toml']
+
+# [[plugins]]
+# repo = "plasticboy/vim-markdown"
+# on_ft = ['md']
+#
+# [[plugins]]
+# repo = 'kannokanno/previm'
+# on_ft = ['md']
+#
