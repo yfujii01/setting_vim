@@ -32,3 +32,4 @@ repo = 'terryma/vim-multiple-cursors'
 # 連番作成
 [[plugins]]
 repo = 'deris/vim-rengbang'
+

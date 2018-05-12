@@ -18,7 +18,8 @@ create_link .bashrc
 
 create_link .gitconfig
 
-create_link .vim_cheatsheet.md
-create_link .vim_dein_lazy.toml
-create_link .vim_dein.toml
+create_link .vimCheat.md
+create_link .vimPlugin.toml
+create_link .vimLazy.toml
+create_link .vimKeymap.vim
 create_link .vimrc

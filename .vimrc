@@ -15,6 +15,12 @@ set number
 "タブの間隔
 set tabstop=4
 
+"前回のカーソル位置を復元
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
+
 " インクリメンタルサーチ. １文字入力毎に検索を行う
 set incsearch 
 
@@ -100,29 +106,6 @@ set showcmd
 
 
 
-"===============================
-"独自キーマッピング
-"===============================
-"----
-"noremap(ノーマルモード＋ビジュアルモード)
-"----
-noremap j gj
-noremap k gk
-
-"----
-"nnoremap(ノーマルモード)
-"----
-nnoremap <Down> gj
-nnoremap <Up>   gk
-" ESCキー2度押しでハイライトの切り替え
-nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
-
-nnoremap <leader>z :set wrap<CR>
-nnoremap <leader>zz :set nowrap<CR>
-
-nnoremap <leader>b :NERDTree<CR>
-
-
 
 "===============================
 "dein Scripts
@@ -145,8 +128,8 @@ endif
 if dein#load_state(s:dein_path)
   call dein#begin(s:dein_path)
 
-  let s:toml        = '~/.vim_dein.toml'
-  let s:lazy_toml   = '~/.vim_dein_lazy.toml'
+  let s:toml        = '~/.vimPlugin.toml'
+  let s:lazy_toml   = '~/.vimLazy.toml'
 
   " TOML 読み込み
   call dein#load_toml(s:toml,      {'lazy': 0})
@@ -187,7 +170,7 @@ let NERDTreeShowHidden = 1
 
 " 自分用チートシートを表示する(:Cheat)
 " repo = 'reireias/vim-cheatsheet'
-let g:cheatsheet#cheat_file = '~/.vim_cheatsheet.md'
+let g:cheatsheet#cheat_file = '~/.vimCheat.md'
 
 
 " # マルチカーソル
@@ -218,3 +201,10 @@ set t_Co=256
 " 検索ハイライト設定
 highlight LineNr ctermfg=darkyellow
 
+
+"===============================
+" キーマッピング設定を読み込む
+"===============================
+if filereadable(expand('~/.vimKeymap.vim'))
+  source ~/.vimKeymap.vim
+endif
