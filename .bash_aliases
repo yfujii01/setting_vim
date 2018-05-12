@@ -1,6 +1,6 @@
 alias ll='ls -alF'
-alias la='ls -A1'
-alias l='ls -1'
+alias la='ls -alF'
+alias l='ls -alF'
 alias sshpi='ssh pi@0.tcp.ap.ngrok.io -p'
 alias sftppi='echo "sftp -P xxxx pi@0.tcp.ap.ngrok.io"'
 alias g='grep'
