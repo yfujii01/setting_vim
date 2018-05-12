@@ -21,6 +21,9 @@ augroup vimrcEx
   \ exe "normal g`\"" | endif
 augroup END
 
+" 画面端で折り返しはしないをデフォルトにする
+set nowrap
+
 " インクリメンタルサーチ. １文字入力毎に検索を行う
 set incsearch 
 

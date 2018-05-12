@@ -41,6 +41,9 @@ nnoremap <S-Down> v<Down>
 nnoremap <C-Up> <C-y>
 nnoremap <C-Down> <C-e>
 
+" 全選択
+nnoremap <C-a> ggvG$
+
 "------------------------------------------------------------
 "ビジュアルモード
 "------------------------------------------------------------
@@ -56,6 +59,6 @@ vnoremap <S-Down> <Down>
 "------------------------------------------------------------
 inoremap <S-Up> <ESC>v<Up>
 inoremap <S-Left> <ESC>v<Left>
-" inoremap <S-Right> <ESC>v<Right>
+inoremap <S-Right> <ESC>v<Right>
 inoremap <S-Down> <ESC>v<Down>
 

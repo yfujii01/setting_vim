@@ -33,3 +33,7 @@ repo = 'terryma/vim-multiple-cursors'
 [[plugins]]
 repo = 'deris/vim-rengbang'
 
+# フォーマット
+[[plugins]]
+repo = 'h1mesuke/vim-alignta'
+
