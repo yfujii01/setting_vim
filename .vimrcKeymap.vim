@@ -4,14 +4,15 @@
 "------------------------------------------------------------
 " ノーマルモード＆ビジュアルモード
 "------------------------------------------------------------
+" 上下移動を表示に合わせる
 noremap j gj
 noremap k gk
+nnoremap <Down> gj
+nnoremap <Up>   gk
 
 "------------------------------------------------------------
 " ノーマルモード
 "------------------------------------------------------------
-nnoremap <Down> gj
-nnoremap <Up>   gk
 
 " BackSpaceで削除
 nnoremap <BS>  "_X
@@ -75,9 +76,9 @@ nnoremap <C-h> :%s///g<Left><Left>
 au FileType python nnoremap <C-l> :Autopep8<CR> 
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
 
-
 " 下へコピー
 nnoremap <C-d> yy<Down>P
+vnoremap <C-d> dp`]pv`]<left>
 
 " Tabでインデント挿入
 nnoremap <Tab> i<Tab><Esc>
@@ -104,8 +105,6 @@ vnoremap <S-Tab> :s/^\t//g<CR>gv
 " 行移動
 vnoremap <C-S-Up> d<Up>P`[v`]<Left>
 vnoremap <C-S-Down> d<Down>P`[v`]<Left>
-
-
 
 "------------------------------------------------------------
 " inoremap(インサートモード)
