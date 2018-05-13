@@ -90,7 +90,8 @@ nnoremap <End> <End><Right>
 "===============================
 
 " 置換
-nnoremap <C-h> :%s///g<Left><Left>
+nnoremap <C-h> :%s///g<Left><Left><Left>
+vnoremap <C-h> :s///g<Left><Left><Left>
 
 " 削除キーでyankしない
 nnoremap x "_x
