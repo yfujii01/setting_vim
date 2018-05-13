@@ -65,9 +65,6 @@ inoremap <S-Tab> <Esc>v:s/^\t//g<CR>i
 
 " spaceでスペースを挿入
 nnoremap <Space> i <ESC><Right>
-vnoremap <Space> :s/^/ /g<CR>:noh<CR>gv
-vnoremap <S-Space> :s/^ //g<CR>gv
-
 
 " BackSpaceで削除
 nnoremap <BS>  "_X
