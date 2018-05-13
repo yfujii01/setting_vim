@@ -106,7 +106,7 @@ inoremap <C-v> <ESC><Right><C-v>
 inoremap jj <Esc>
 
 " .vimrc再読込
-nnoremap <leader>r :source ~/.vimrc<CR>
+nnoremap <C-@> :source ~/.vimrc<CR>
 
 " ハイライトを消す
 nnoremap <f3> :noh<CR>
