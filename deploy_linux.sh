@@ -10,16 +10,21 @@ function create_link () {
 	echo 'link create ~/'${file}
 }
 
-create_link .aa
-create_link .bash_aliases
-create_link .bash_linux
 create_link .bash_profile
 create_link .bashrc
+create_link .bashrcImg
+create_link .bashrcAliases
+create_link .bashrcLinux
 
 create_link .gitconfig
 
-create_link .vimCheat.md
-create_link .vimPlugin.toml
-create_link .vimLazy.toml
-create_link .vimKeymap.vim
 create_link .vimrc
+create_link .vimrcInit.vim
+create_link .vimrcColor.vim
+create_link .vimrcCheat.md
+create_link .vimrcPlugin.vim
+create_link .vimrcKeymap.vim
+
+
+source ~/.bashrc
+

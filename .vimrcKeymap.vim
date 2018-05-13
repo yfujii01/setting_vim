@@ -31,17 +31,12 @@ nnoremap <CR> i<CR><Esc>
 " 行削除(ヤンクしない)
 nnoremap <C-y> "_dd
 
-" ファイル保存系操作
-nnoremap <leader>w :w<CR>
-nnoremap <leader>w! :w!<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>q! :q!<CR>
+" 行移動
+nnoremap <C-S-Up> dd<Up>P
+nnoremap <C-S-Down> dd<Down>P
 
 " .vimrc再読込
 nnoremap <leader>r :source ~/.vimrc<CR>
-
-" ESCキー2度押しでハイライトの切り替え
-" nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
 " ハイライトを消す
 nnoremap <f3> :noh<CR>
@@ -54,10 +49,10 @@ nnoremap <leader>x :set nowrap<CR>
 nnoremap <leader>b :NERDTree<CR>
 
 " Shift+キーでvisualモード開始
-nnoremap <S-Up> v<Up>
+nnoremap <S-Up> $v^<Up>
 nnoremap <S-Left> v<Left>
 nnoremap <S-Right> v<Right>
-nnoremap <S-Down> v<Down>
+nnoremap <S-Down> ^v$<Down>
 nnoremap <S-Home> v<Home>
 nnoremap <S-End> v<End>
 nnoremap <S-C-Home> v<C-Home>
@@ -74,11 +69,18 @@ nnoremap <C-Down> <C-e>
 nnoremap <C-a> ggvG$
 
 " 置換
-nnoremap <C-h> :%s/前/後/g 
+nnoremap <C-h> :%s///g<Left><Left>
 
 " フォーマット(ファイルによって挙動を変える)
 au FileType python nnoremap <C-l> :Autopep8<CR> 
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
+
+
+" 下へコピー
+nnoremap <C-d> yy<Down>P
+
+" Tabでインデント挿入
+nnoremap <Tab> i<Tab><Esc>
 
 "------------------------------------------------------------
 " ビジュアルモード
@@ -95,16 +97,27 @@ vnoremap <Left> <ESC><Left>
 vnoremap <Right> <ESC><Right>
 vnoremap <Down> <ESC><Down>
 
+" タブでインデント変更
+vnoremap <Tab> :s/^/\t/g<CR>:noh<CR>gv
+vnoremap <S-Tab> :s/^\t//g<CR>gv
+
+" 行移動
+vnoremap <C-S-Up> d<Up>P`[v`]<Left>
+vnoremap <C-S-Down> d<Down>P`[v`]<Left>
+
 
 
 "------------------------------------------------------------
 " inoremap(インサートモード)
 "------------------------------------------------------------
-inoremap <S-Up> <ESC>v<Up>
+inoremap <S-Up> <ESC>$v^<Up>
 inoremap <S-Left> <ESC>v<Left>
 inoremap <S-Right> <ESC>v<Right>
-inoremap <S-Down> <ESC>v<Down>
+inoremap <S-Down> <ESC>^v$<Down>
 
 " ctrl+vでvisual矩形へ
 inoremap <C-v> <ESC><Right><C-v>
+
+" jjでesc
+inoremap jj <Esc>
 
