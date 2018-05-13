@@ -89,6 +89,10 @@ nnoremap <End> <End><Right>
 " 特殊コマンド
 "===============================
 
+" 保存
+nnoremap <C-s> :w<CR>:echo '保存しました☆彡'<CR>
+inoremap <C-s> :w<CR>:echo '保存しました☆彡'<CR>
+
 " 置換
 nnoremap <C-h> :%s///g<Left><Left><Left>
 vnoremap <C-h> :s///g<Left><Left><Left>
