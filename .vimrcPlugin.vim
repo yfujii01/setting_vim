@@ -24,7 +24,7 @@ if dein#load_state(s:dein_path)
 
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/vimproc.vim')
-  call dein#add('nathanaelkane/vim-indent-guides')          " インデントに色を付けて見やすくする
+  " call dein#add('nathanaelkane/vim-indent-guides')          " インデントに色を付けて見やすくする
   call dein#add('tpope/vim-fugitive')                       " ステータス行に現在のgitブランチを表示する
   call dein#add('tomtom/tcomment_vim')                      " コメントON/OFFを手軽に実行
   call dein#add('scrooloose/nerdtree')                      " プロジェクトツリーを表示する
@@ -57,7 +57,7 @@ endif
 " インデントに色を付けて見やすくする
 " ここより前に色設定を変えていると反映されないことがある
 " nathanaelkane/vim-indent-guides
-let g:indent_guides_enable_on_vim_startup = 1
+" let g:indent_guides_enable_on_vim_startup = 1
 
 
 " gitを便利に使う

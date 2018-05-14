@@ -58,7 +58,6 @@ nnoremap <C-S-Down> dd<Down>P
 vnoremap <C-S-Up>   d<Up>P`[v`]V
 vnoremap <C-S-Down> d<Down>P`[v`]V
 
-
 " フォーマット(ファイルによって挙動を変える)
 au FileType python nnoremap <C-l> :Autopep8<CR> 
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
@@ -68,12 +67,12 @@ nnoremap <C-d> yyp
 vnoremap <C-d> dp`]pv`]<left>
 inoremap <C-d> <Esc>yypi
 
-" タブでインデント変更
+" タブでインデント変更(shift+tab時はスペースであっても消す)
 nnoremap <Tab>   v:s/^/\t/g<CR>:noh<CR>
-nnoremap <S-Tab> v:s/^\t//g<CR>
 vnoremap <Tab>   :s/^/\t/g<CR>:noh<CR>gv
-vnoremap <S-Tab> :s/^\t//g<CR>gv
-inoremap <S-Tab> <Esc>v:s/^\t//g<CR>i
+nnoremap <S-Tab> v:s/\(^\t\\|^ \{1,4}\)//g<CR>:noh<CR>
+vnoremap <S-Tab> :s/\(^\t\\|^ \{1,4}\)//g<CR>:noh<CR>gv
+inoremap <S-Tab> <Esc>v:s/\(^\t\\|^ \{1,4}\)//g<CR>:noh<CR>i
 
 " spaceでスペースを挿入
 nnoremap <Space> i <ESC><Right>
