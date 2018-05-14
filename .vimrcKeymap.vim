@@ -110,8 +110,8 @@ inoremap <C-y> <Esc>"_dd
 " inoremap <C-s> <Esc>:w<CR>:echo '保存しました☆彡'<CR>
 
 " 置換
-nnoremap <C-h> :%s///g<Left><Left><Left>
-vnoremap <C-h> :s///g<Left><Left><Left>
+nnoremap <C-h> :%s///gc<Left><Left><Left><Left>
+vnoremap <C-h> :s///gc<Left><Left><Left><Left>
 
 " ctrl+vでvisual矩形へ
 inoremap <C-v> <ESC><Right><C-v>
