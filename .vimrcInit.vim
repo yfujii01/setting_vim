@@ -15,6 +15,9 @@ set number
 "タブの間隔
 set tabstop=4
 
+"インデント幅をスペース4つ分にする
+set shiftwidth=4
+
 " 行末のスペースを可視化
 " set list
 " set listchars=eol:\ ,trail:-
