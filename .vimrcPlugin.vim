@@ -24,7 +24,7 @@ if dein#load_state(s:dein_path)
 
   call dein#add('Shougo/dein.vim')
   call dein#add('Shougo/vimproc.vim')
-  " call dein#add('nathanaelkane/vim-indent-guides')          " インデントに色を付けて見やすくする
+  " call dein#add('nathanaelkane/vim-indent-guides')        " インデントに色を付けて見やすくする
   call dein#add('tpope/vim-fugitive')                       " ステータス行に現在のgitブランチを表示する
   call dein#add('tomtom/tcomment_vim')                      " コメントON/OFFを手軽に実行
   call dein#add('scrooloose/nerdtree')                      " プロジェクトツリーを表示する
@@ -33,6 +33,7 @@ if dein#load_state(s:dein_path)
   call dein#add('deris/vim-rengbang')                       " 連番作成
   call dein#add('h1mesuke/vim-alignta')                     " フォーマット
   call dein#add('gosukiwi/vim-atom-dark')                   " カラースキーマ
+  call dein#add('vim-scripts/vim-auto-save')                " 自動保存
 
   call dein#add('Shougo/unite.vim')
   call dein#add('Shougo/neomru.vim',{'on_source': 'unite.vim'})
@@ -70,14 +71,16 @@ set statusline+=%{fugitive#statusline()}
 " 隠しファイルをデフォルトで表示
 let NERDTreeShowHidden = 1
 
-
 " 自分用チートシートを表示する(:Cheat)
 " 'reireias/vim-cheatsheet'
 let g:cheatsheet#cheat_file = '~/.vimCheat.md'
 
-
 " # マルチカーソル
-" [[plugins]]
 " 'terryma/vim-multiple-cursors'
 let g:multi_cursor_select_all_key      = '<f2>'
+
+" 自動保存を有効にする
+" 'vim-scripts/vim-auto-save'
+let g:auto_save = 1
+let g:auto_save_silent = 1
 
