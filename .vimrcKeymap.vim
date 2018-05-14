@@ -89,10 +89,16 @@ vnoremap <C-S-Down> d<Down>P`[v`]V
 au FileType python nnoremap <C-l> :Autopep8<CR> 
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
 
+" 貼り付け
+nnoremap p   "*p
+nnoremap P   "*P
+vnoremap p   "*p
+vnoremap P   "*P
+
 " 下へコピー
-nnoremap <C-d> yyp
-vnoremap <C-d> dp`]pv`]<left>
-inoremap <C-d> <Esc>yypi
+nnoremap <C-d> VyPgvV
+vnoremap <C-d> yPgv
+inoremap <C-d> <Esc>VyPgvVa
 
 " タブでインデント変更(shift+tab時はスペースであっても消す)
 nnoremap <Tab>   v:s/^/\t/g<CR>:noh<CR>
