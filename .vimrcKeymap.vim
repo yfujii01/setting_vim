@@ -52,7 +52,9 @@ nnoremap <S-C-End>  v<C-End>
 " 編集系
 "===============================
 
-" 選択行を移動
+" 選択行を移動(クリップボードを使用)
+nnoremap <C-S-Up>   dd<Up>P
+nnoremap <C-S-Down> dd<Down>P
 vnoremap <C-S-Up>   d<Up>P`[v`]V
 vnoremap <C-S-Down> d<Down>P`[v`]V
 
@@ -76,20 +78,8 @@ inoremap <S-Tab> <Esc>v:s/^\t//g<CR>i
 " spaceでスペースを挿入
 nnoremap <Space> i <ESC><Right>
 
-" BackSpaceで削除
-nnoremap <BS>  "_X
-vnoremap <BS>  "_X
-
 " Enterで改行
 nnoremap <CR> i<CR><Esc>
-
-" 行削除(ヤンクしない)
-nnoremap <C-y> "_dd
-inoremap <C-y> <Esc>"_ddi
-
-" 行移動
-nnoremap <C-S-Up>   dd<Up>P
-nnoremap <C-S-Down> dd<Down>P
 
 " Endで改行コードまで選択
 nnoremap <End> <End><Right>
@@ -99,23 +89,32 @@ nnoremap <End> <End><Right>
 " 削除(基本的にヤンクさせない)
 "===============================
 
-"===============================
-" 特殊コマンド
-"===============================
+" BackSpaceで削除
+nnoremap <BS>  "_X
+vnoremap <BS>  "_X
 
-" 保存
-nnoremap <C-s> :w<CR>:echo '保存しました☆彡'<CR>
-inoremap <C-s> :w<CR>:echo '保存しました☆彡'<CR>
-
-" 置換
-nnoremap <C-h> :%s///g<Left><Left><Left>
-vnoremap <C-h> :s///g<Left><Left><Left>
+" 行削除(ヤンクしない)
+nnoremap <C-y> "_dd
+inoremap <C-y> <Esc>"_dd
 
 " 削除キーでyankしない
 nnoremap x "_x
 nnoremap X "_X
 nnoremap d "_d
 nnoremap D "_D
+vnoremap <Del> "_d
+
+"===============================
+" 特殊コマンド
+"===============================
+
+" 保存(terminalによって動いたり動かなかったり)
+" nnoremap <C-s> :w<CR>:echo '保存しました☆彡'<CR>
+" inoremap <C-s> <Esc>:w<CR>:echo '保存しました☆彡'<CR>
+
+" 置換
+nnoremap <C-h> :%s///g<Left><Left><Left>
+vnoremap <C-h> :s///g<Left><Left><Left>
 
 " ctrl+vでvisual矩形へ
 inoremap <C-v> <ESC><Right><C-v>
