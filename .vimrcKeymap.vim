@@ -89,20 +89,18 @@ nnoremap <End> <End><Right>
 " 削除(基本的にヤンクさせない)
 "===============================
 
-" BackSpaceで削除
 nnoremap <BS>  "_X
 vnoremap <BS>  "_X
+nnoremap <Del> "_x
+vnoremap <Del> "_d
+nnoremap x "_x
+nnoremap X "_X
+" nnoremap d "_d
+nnoremap D "_D
 
 " 行削除(ヤンクしない)
 nnoremap <C-y> "_dd
 inoremap <C-y> <Esc>"_dd
-
-" 削除キーでyankしない
-nnoremap x "_x
-nnoremap X "_X
-nnoremap d "_d
-nnoremap D "_D
-vnoremap <Del> "_d
 
 "===============================
 " 特殊コマンド
