@@ -85,7 +85,7 @@ set laststatus=2
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
 "クリップボードを使う
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " マウスの有効化
 if has('mouse')
