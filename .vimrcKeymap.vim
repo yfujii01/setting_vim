@@ -89,11 +89,21 @@ vnoremap <C-S-Down> d<Down>P`[v`]V
 au FileType python nnoremap <C-l> :Autopep8<CR> 
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
 
+" コピー
+nnoremap y   "+y
+vnoremap y   "+y
+" 0 vnoremap y   "*y
+" 1 vnoremap y   "*y
+" 2 vnoremap y   "*y
+" 3 vnoremap y   "*y
+" 4 vnoremap y   "*y
+
 " 貼り付け
-nnoremap p   "*p
-nnoremap P   "*P
-vnoremap p   "*p
-vnoremap P   "*P
+nnoremap p   "+p
+nnoremap P   "+P
+vnoremap p   "+p
+vnoremap P   "+P
+
 
 " 下へコピー
 nnoremap <C-d> VyPgvV
@@ -118,21 +128,13 @@ nnoremap <End> <End><Right>
 
 
 "===============================
-" 削除(基本的にヤンクさせない)
+" 削除
 "===============================
+nnoremap d "+d
 
-nnoremap <BS>  "_X
-vnoremap <BS>  "_X
-nnoremap <Del> "_x
-vnoremap <Del> "_d
-nnoremap x "_x
-nnoremap X "_X
-" nnoremap d "_d
-nnoremap D "_D
-
-" 行削除(ヤンクしない)
-nnoremap <C-y> "_dd
-inoremap <C-y> <Esc>"_dd
+" 行削除
+nnoremap <C-y> dd
+inoremap <C-y> <Esc>dd
 
 "===============================
 " 特殊コマンド
