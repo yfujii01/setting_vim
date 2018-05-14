@@ -131,6 +131,7 @@ nnoremap <End> <End><Right>
 " 削除
 "===============================
 nnoremap d "+d
+nnoremap <Bs> X
 
 " 行削除
 nnoremap <C-y> dd
@@ -143,6 +144,7 @@ inoremap <C-y> <Esc>dd
 " 保存(terminalによって動いたり動かなかったり)
 " nnoremap <C-s> :w<CR>:echo '保存しました☆彡'<CR>
 " inoremap <C-s> <Esc>:w<CR>:echo '保存しました☆彡'<CR>
+
 
 " 置換
 nnoremap <C-h> :%s///gc<Left><Left><Left><Left>
