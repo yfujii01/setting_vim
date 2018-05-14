@@ -65,6 +65,20 @@ nnoremap <A-C-End>  <C-v><C-End>
 " 編集系
 "===============================
 
+" visual mode 中にIとAでまとめて編集
+vnoremap <expr> I  <SID>force_blockwise_visual('I')
+vnoremap <expr> A  <SID>force_blockwise_visual('A')
+function! s:force_blockwise_visual(next_key)
+  if mode() ==# 'v'
+    return "\<C-v>" . a:next_key
+  elseif mode() ==# 'V'
+    return "\<C-v>0o$" . a:next_key
+  else  " mode() ==# "\<C-v>"
+    return a:next_key
+  endif
+endfunction
+
+
 " 選択行を移動(クリップボードを使用)
 nnoremap <C-S-Up>   dd<Up>P
 nnoremap <C-S-Down> dd<Down>P
