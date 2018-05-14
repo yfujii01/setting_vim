@@ -34,6 +34,7 @@ nnoremap <C-Down> <C-e>
 nnoremap <C-a> ggvG$
 
 " 選択しつつビジュアルモードへ
+
 inoremap <S-Up>     <ESC>V<Up>
 inoremap <S-Down>   <ESC>V<Down>
 inoremap <S-Left>   <ESC>v<Left>
@@ -47,6 +48,18 @@ nnoremap <S-End>    v<End>
 nnoremap <S-C-Home> v<C-Home>
 nnoremap <S-C-End>  v<C-End>
 
+inoremap <A-Up>     <ESC><C-v><Up>
+inoremap <A-Down>   <ESC><C-v><Down>
+inoremap <A-Left>   <ESC><C-v><Left>
+inoremap <A-Right>  <ESC><C-v><Right>
+nnoremap <A-Up>     <C-v><Up>
+nnoremap <A-Down>   <C-v><Down>
+nnoremap <A-Left>   <C-v><Left>
+nnoremap <A-Right>  <C-v><Right>
+nnoremap <A-Home>   <C-v><Home>
+nnoremap <A-End>    <C-v><End>
+nnoremap <A-C-Home> <C-v><C-Home>
+nnoremap <A-C-End>  <C-v><C-End>
 
 "===============================
 " 編集系
