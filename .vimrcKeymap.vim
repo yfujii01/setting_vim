@@ -15,36 +15,46 @@ vnoremap j gj
 vnoremap k gk
 
 " visual modeの移動はshift押しながら
-vnoremap <S-Down> gj
-vnoremap <S-Up>   gk
-vnoremap <S-Left> <Left>
+vnoremap <S-Down>  gj
+vnoremap <S-Up>    gk
+vnoremap <S-Left>  <Left>
 vnoremap <S-Right> <Right>
 
 " visual modeを解除して移動
-vnoremap <Up> <ESC><Up>
-vnoremap <Left> <ESC><Left>
+vnoremap <Up>    <ESC><Up>
+vnoremap <Left>  <ESC><Left>
 vnoremap <Right> <ESC><Right>
-vnoremap <Down> <ESC><Down>
+vnoremap <Down>  <ESC><Down>
 
 " スクロール
-nnoremap <C-Up> <C-y>
+nnoremap <C-Up>   <C-y>
 nnoremap <C-Down> <C-e>
 
 " 全選択
 nnoremap <C-a> ggvG$
+
+" 選択しつつビジュアルモードへ
+inoremap <S-Up>     <ESC>V<Up>
+inoremap <S-Down>   <ESC>V<Down>
+inoremap <S-Left>   <ESC>v<Left>
+inoremap <S-Right>  <ESC>v<Right>
+nnoremap <S-Up>     V<Up>
+nnoremap <S-Down>   V<Down>
+nnoremap <S-Left>   v<Left>
+nnoremap <S-Right>  v<Right>
+nnoremap <S-Home>   v<Home>
+nnoremap <S-End>    v<End>
+nnoremap <S-C-Home> v<C-Home>
+nnoremap <S-C-End>  v<C-End>
+
 
 "===============================
 " 編集系
 "===============================
 
 " 選択行を移動
-vnoremap <C-S-Up> d<Up>P`[v`]<Left>
-vnoremap <C-S-Down> d<Down>P`[v`]<Left>
-
-inoremap <S-Up> <ESC>$v^<Up>
-inoremap <S-Left> <ESC>v<Left>
-inoremap <S-Right> <ESC>v<Right>
-inoremap <S-Down> <ESC>^v$<Down>
+vnoremap <C-S-Up>   d<Up>P`[v`]V
+vnoremap <C-S-Down> d<Down>P`[v`]V
 
 
 " フォーマット(ファイルによって挙動を変える)
@@ -57,9 +67,9 @@ vnoremap <C-d> dp`]pv`]<left>
 inoremap <C-d> <Esc>yypi
 
 " タブでインデント変更
-nnoremap <Tab> v:s/^/\t/g<CR>:noh<CR>
+nnoremap <Tab>   v:s/^/\t/g<CR>:noh<CR>
 nnoremap <S-Tab> v:s/^\t//g<CR>
-vnoremap <Tab> :s/^/\t/g<CR>:noh<CR>gv
+vnoremap <Tab>   :s/^/\t/g<CR>:noh<CR>gv
 vnoremap <S-Tab> :s/^\t//g<CR>gv
 inoremap <S-Tab> <Esc>v:s/^\t//g<CR>i
 
@@ -78,12 +88,16 @@ nnoremap <C-y> "_dd
 inoremap <C-y> <Esc>"_ddi
 
 " 行移動
-nnoremap <C-S-Up> dd<Up>P
+nnoremap <C-S-Up>   dd<Up>P
 nnoremap <C-S-Down> dd<Down>P
 
 " Endで改行コードまで選択
 nnoremap <End> <End><Right>
 
+
+"===============================
+" 削除(基本的にヤンクさせない)
+"===============================
 
 "===============================
 " 特殊コマンド
@@ -122,13 +136,4 @@ nnoremap <leader>x :set nowrap<CR>
 " プロジェクトツリー表示(プラグイン)
 nnoremap <leader>b :NERDTree<CR>
 
-" Shift+キーでvisualモード開始
-nnoremap <S-Up> $v^<Up>
-nnoremap <S-Left> v<Left>
-nnoremap <S-Right> v<Right>
-nnoremap <S-Down> ^v$<Down>
-nnoremap <S-Home> v<Home>
-nnoremap <S-End> v<End>
-nnoremap <S-C-Home> v<C-Home>
-nnoremap <S-C-End> v<C-End>
 
