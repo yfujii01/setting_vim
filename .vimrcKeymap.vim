@@ -98,7 +98,11 @@ vnoremap <C-c> "+y
 vnoremap <C-x> "+d
 " クリップボードから貼り付け
 nnoremap <C-v> "+P
+inoremap <C-v> <C-r>+
 
+" set formatoptions-=ro
+set formatoptions=
+set formatoptions=cql
 
 " 下へコピー
 nnoremap <C-d> VyPgvV
@@ -152,9 +156,6 @@ inoremap <C-y> <Esc>dd
 " 置換
 nnoremap <C-h> :%s///gc<Left><Left><Left><Left>
 vnoremap <C-h> :s///gc<Left><Left><Left><Left>
-
-" ctrl+vでvisual矩形へ
-inoremap <C-v> <ESC><Right><C-v>
 
 " jjでesc
 inoremap jj <Esc>
