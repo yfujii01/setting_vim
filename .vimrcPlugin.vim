@@ -71,3 +71,23 @@ endif
 " 'terryma/vim-multiple-cursors'
 " let g:multi_cursor_select_all_key      = '<f2>'
 
+
+"NERDTree用隠しファイルを表示し、カーソルをファイルに移す
+function s:MoveToFileAtStart()
+  call feedkeys("\I")
+  call feedkeys("\<C-w>")
+  call feedkeys("\w")
+endfunction
+
+"vimの起動時に自動的にNERDTreeを開く(call 以降はプラスアルファ)
+autocmd vimenter * NERDTree | call s:MoveToFileAtStart()
+
+"vimが空ファイルを開いたときにNERDTreeを自動的に開く
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+
+"開いている唯一のウィンドウがNERDTreeであれば閉じる
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+

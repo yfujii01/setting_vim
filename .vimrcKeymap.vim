@@ -179,7 +179,7 @@ nnoremap <leader>x :set nowrap<CR>
 nnoremap <leader>b :NERDTree<CR>
 
 
-" タブを切り替える  
+" タブを切り替える
 nmap <leader>tt <Plug>AirlineSelectPrevTab
 " nmap <C-n> <Plug>AirlineSelectNextTab
 
