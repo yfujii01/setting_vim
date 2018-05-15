@@ -20,3 +20,6 @@ on_ft = ['toml']
 repo    = 'davidhalter/jedi-vim'
 on_ft = ['python']
 
+[[plugins]]
+repo =  'scrooloose/syntastic'
+

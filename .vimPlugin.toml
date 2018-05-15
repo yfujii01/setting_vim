@@ -29,11 +29,19 @@ depends = ['vim-airline-themes']
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 hook_add = '''
-  let g:airline#extensions#tabline#enabled = 1 
+  let g:airline#extensions#tabline#enabled = 1
   let g:airline_theme = 'papercolor'
 '''
 
 [[plugins]]
 repo = 'Townk/vim-autoclose'
 
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+hook_add = '''
+  let g:indentLine_char = '¦'
+'''
+
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
 

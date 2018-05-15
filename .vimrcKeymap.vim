@@ -13,6 +13,7 @@ nnoremap <Down> gj
 nnoremap <Up>   gk
 vnoremap j gj
 vnoremap k gk
+nnoremap <C-End> <C-End><Right>
 
 " visual modeの移動はshift押しながら
 vnoremap <S-Down>  gj
