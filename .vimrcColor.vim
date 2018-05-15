@@ -7,7 +7,7 @@ syntax on
 "カラースキーマ
 " colorscheme desert
 "colorscheme molokai
-colorscheme atom-dark
+"colorscheme atom-dark
 
 " よくわからないが一度配色設定を変更後に256に戻すことで正しい256色設定になる
 set t_Co=25

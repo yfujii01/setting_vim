@@ -67,14 +67,7 @@ endif
 "プラグイン設定
 "===============================
 
-let g:airline_theme = 'molokai'
-
-" gitを便利に使う
-" ステータス行に現在のgitブランチを表示する 	
-" 'tpope/vim-fugitive'
-" set statusline+=%{fugitive#statusline()}
-
 " # マルチカーソル
 " 'terryma/vim-multiple-cursors'
-let g:multi_cursor_select_all_key      = '<f2>'
+" let g:multi_cursor_select_all_key      = '<f2>'
 

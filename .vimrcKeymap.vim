@@ -39,8 +39,8 @@ inoremap <S-Up>     <ESC>V<Up>
 inoremap <S-Down>   <ESC>V<Down>
 inoremap <S-Left>   <ESC>v<Left>
 inoremap <S-Right>  <ESC>v<Right>
-nnoremap <S-Up>     V<Up>
-nnoremap <S-Down>   V<Down>
+nnoremap <S-Up>     V
+nnoremap <S-Down>   V
 nnoremap <S-Left>   v<Left>
 nnoremap <S-Right>  v<Right>
 nnoremap <S-Home>   v<Home>
@@ -92,11 +92,13 @@ au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR>
 au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
 
 " クリップボードへコピー
-nnoremap <C-y>   "+y
-vnoremap <C-y>   "+y
-
+nnoremap <C-c> "+y
+nnoremap <C-x> "+d
+vnoremap <C-c> "+y
+vnoremap <C-x> "+d
 " クリップボードから貼り付け
-nnoremap <C-p>   "+P
+nnoremap <C-v> "+P
+
 
 " 下へコピー
 nnoremap <C-d> VyPgvV
@@ -120,6 +122,14 @@ nnoremap <CR> i<CR><Esc>
 nnoremap <End> <End><Right>
 
 
+
+" aaaa1bbbb
+" aaaa5bbbb
+" aaaa3bbbb
+" aaaa4bbbb
+" aaaa2bbbb
+" aaaa3bbbb
+
 "===============================
 " 削除
 "===============================
@@ -127,8 +137,8 @@ nnoremap <End> <End><Right>
 nnoremap <Bs> X
 
 " 行削除
-nnoremap <C-k> dd
-inoremap <C-k> <Esc>dd
+nnoremap <C-y> dd
+inoremap <C-y> <Esc>dd
 
 "===============================
 " 特殊コマンド
