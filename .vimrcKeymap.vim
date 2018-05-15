@@ -92,10 +92,14 @@ au FileType python nnoremap <C-l> :Autopep8<CR>
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
 au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
 
+"enterで整形設定に行くようにする
+vnoremap <Enter> <Plug>(EasyAlign)
+
 " クリップボードへコピー
 nnoremap <C-c> "+y
 nnoremap <C-x> "+d
 vnoremap <C-c> "+y
+
 vnoremap <C-x> "+d
 " クリップボードから貼り付け
 nnoremap <C-v> "+P

@@ -5,6 +5,9 @@ repo    = 'Shougo/dein.vim'
 repo    = 'tpope/vim-fugitive'
 
 [[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
 repo    = 'tomtom/tcomment_vim'
 
 [[plugins]]
@@ -44,4 +47,12 @@ hook_add = '''
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
+
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
 
