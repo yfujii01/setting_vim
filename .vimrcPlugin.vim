@@ -1,6 +1,10 @@
 "===============================
 " プラグイン設定
 "===============================
+
+" ウィンドウズ用vimproc用のDLLをダウンロードする
+let g:vimproc#download_windows_dll = 1
+
 if &compatible
   set nocompatible
 endif
