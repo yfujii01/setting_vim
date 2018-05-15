@@ -32,3 +32,8 @@ hook_add = '''
   let g:airline#extensions#tabline#enabled = 1 
   let g:airline_theme = 'papercolor'
 '''
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+
