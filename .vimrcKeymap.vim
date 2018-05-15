@@ -79,18 +79,6 @@ function! s:force_blockwise_visual(next_key)
   endif
 endfunction
 
-" visualモードでの貼り付け
-" vnoremap <expr> <C-p>  <SID>myVisualPaste()
-" function! s:myVisualPaste()
-"   if mode() ==# 'v'
-"     return "\<C-v>I\<C-r>+\<Esc>"
-"   elseif mode() ==# 'V'
-"     return "xI\<CR>\<Up>\<C-r>+\<Esc>"
-"   else  " mode() ==# "\<C-v>"
-"     return "I\<C-r>+\<Esc>"
-"   endif
-" endfunction
-"
 
 " 選択行を移動(yankを使用)
 nnoremap <C-S-Up>   dd<Up>P
@@ -106,29 +94,10 @@ au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
 " クリップボードへコピー
 nnoremap <C-y>   "+y
 vnoremap <C-y>   "+y
-" 0 CTRL-]	短縮入力(Abbreviations)を展開
-" CTRL-^	lmapを有効化・無効化
-" CTRL-_	allowrevinsが設定されている時に言語を切り替えるvnoremap y   "*y
-" 1 CTRL-]	短縮入力(Abbreviations)を展開
-" CTRL-^	lmapを有効化・無効化
-" CTRL-_	allowrevinsが設定されている時に言語を切り替えるvnoremapvnoremap y   "*y
-" 2 vnoremapvnoremap y   "*y
-" 3 vnoremapvnoremap y   "*y
-" 4 vnoremapvnoremap y   "*y
 
-" 貼り付け(yankから)
-" nnoremap p   ""p
-" nnoremap P   ""P
-" vnoremap p   ""p
-" vnoremap P   ""P
-" 貼り付け(clipboardから)
-" nnoremap <C-p>   "+p
+" クリップボードから貼り付け
 nnoremap <C-p>   "+P
-" vnoremap <C-p>   "+P
-" nnoremap <C-P>   "+P
-" vnoremap <C-p>   "+p
-" vnoremap <C-P>   "+P
-"
+
 " 下へコピー
 nnoremap <C-d> VyPgvV
 vnoremap <C-d> yPgv

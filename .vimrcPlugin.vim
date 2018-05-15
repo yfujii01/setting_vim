@@ -72,7 +72,7 @@ let g:airline_theme = 'molokai'
 " gitを便利に使う
 " ステータス行に現在のgitブランチを表示する 	
 " 'tpope/vim-fugitive'
-set statusline+=%{fugitive#statusline()}
+" set statusline+=%{fugitive#statusline()}
 
 " # マルチカーソル
 " 'terryma/vim-multiple-cursors'
