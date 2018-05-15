@@ -20,7 +20,7 @@ else
 	echo '~/.bachrcAliasesが見つかりません'
 fi
 
-# Linuxでのみ実行するスクリプト
+# Linuxでのみ必要なスクリプト(windowsで流しても影響は無い)
 if [ -f ~/.bashrcLinux ]; then
     . ~/.bashrcLinux
 fi

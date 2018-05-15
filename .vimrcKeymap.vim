@@ -103,9 +103,9 @@ au FileType python nnoremap <C-l> :Autopep8<CR>
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
 au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
 
-" コピー
-" nnoremap y   ""y
-" vnoremap y   ""y
+" クリップボードへコピー
+nnoremap <C-y>   "+y
+vnoremap <C-y>   "+y
 " 0 CTRL-]	短縮入力(Abbreviations)を展開
 " CTRL-^	lmapを有効化・無効化
 " CTRL-_	allowrevinsが設定されている時に言語を切り替えるvnoremap y   "*y
@@ -158,8 +158,8 @@ nnoremap <End> <End><Right>
 nnoremap <Bs> X
 
 " 行削除
-nnoremap <C-y> dd
-inoremap <C-y> <Esc>dd
+nnoremap <C-k> dd
+inoremap <C-k> <Esc>dd
 
 "===============================
 " 特殊コマンド
