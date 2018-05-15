@@ -85,7 +85,7 @@ set noswapfile
 set laststatus=2
 
 " ステータス行に表示させる情報の指定
-set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']'.'[改行='.&ff.']'.'[filetype='.&filetype.']'}%=%l,%c%V%8P
 
 "クリップボードを使う
 " set clipboard=unnamedplus
