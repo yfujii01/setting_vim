@@ -87,9 +87,13 @@ set laststatus=2
 " ステータス行に表示させる情報の指定
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']'.'[改行='.&ff.']'.'[filetype='.&filetype.']'}%=%l,%c%V%8P
 
-"クリップボードを使う
+
+" yank時にclipboard領域にも設定する
 " set clipboard=unnamedplus
-" set clipboard&
+" 標準のyankとclipboard設定を使う
+set clipboard=
+" set 
+" clipboard&
 " set clipboard^=unnamedplus
 
 " マウスの有効化

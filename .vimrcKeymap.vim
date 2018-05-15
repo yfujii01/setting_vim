@@ -21,10 +21,10 @@ vnoremap <S-Left>  <Left>
 vnoremap <S-Right> <Right>
 
 " visual modeを解除して移動
-vnoremap <Up>    <ESC><Up>
-vnoremap <Left>  <ESC><Left>
-vnoremap <Right> <ESC><Right>
-vnoremap <Down>  <ESC><Down>
+" vnoremap <Up>    <ESC><Up>
+" vnoremap <Left>  <ESC><Left>
+" vnoremap <Right> <ESC><Right>
+" vnoremap <Down>  <ESC><Down>
 
 " スクロール
 nnoremap <C-Up>   <C-y>
@@ -52,6 +52,7 @@ inoremap <A-Up>     <ESC><C-v><Up>
 inoremap <A-Down>   <ESC><C-v><Down>
 inoremap <A-Left>   <ESC><C-v><Left>
 inoremap <A-Right>  <ESC><C-v><Right>
+
 nnoremap <A-Up>     <C-v><Up>
 nnoremap <A-Down>   <C-v><Down>
 nnoremap <A-Left>   <C-v><Left>
@@ -78,8 +79,20 @@ function! s:force_blockwise_visual(next_key)
   endif
 endfunction
 
+" visualモードでの貼り付け
+" vnoremap <expr> <C-p>  <SID>myVisualPaste()
+" function! s:myVisualPaste()
+"   if mode() ==# 'v'
+"     return "\<C-v>I\<C-r>+\<Esc>"
+"   elseif mode() ==# 'V'
+"     return "xI\<CR>\<Up>\<C-r>+\<Esc>"
+"   else  " mode() ==# "\<C-v>"
+"     return "I\<C-r>+\<Esc>"
+"   endif
+" endfunction
+"
 
-" 選択行を移動(クリップボードを使用)
+" 選択行を移動(yankを使用)
 nnoremap <C-S-Up>   dd<Up>P
 nnoremap <C-S-Down> dd<Down>P
 vnoremap <C-S-Up>   d<Up>P`[v`]V
@@ -88,23 +101,34 @@ vnoremap <C-S-Down> d<Down>P`[v`]V
 " フォーマット(ファイルによって挙動を変える)
 au FileType python nnoremap <C-l> :Autopep8<CR> 
 au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
+au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
 
 " コピー
-nnoremap y   "+y
-vnoremap y   "+y
-" 0 vnoremap y   "*y
-" 1 vnoremap y   "*y
-" 2 vnoremap y   "*y
-" 3 vnoremap y   "*y
-" 4 vnoremap y   "*y
+" nnoremap y   ""y
+" vnoremap y   ""y
+" 0 CTRL-]	短縮入力(Abbreviations)を展開
+" CTRL-^	lmapを有効化・無効化
+" CTRL-_	allowrevinsが設定されている時に言語を切り替えるvnoremap y   "*y
+" 1 CTRL-]	短縮入力(Abbreviations)を展開
+" CTRL-^	lmapを有効化・無効化
+" CTRL-_	allowrevinsが設定されている時に言語を切り替えるvnoremapvnoremap y   "*y
+" 2 vnoremapvnoremap y   "*y
+" 3 vnoremapvnoremap y   "*y
+" 4 vnoremapvnoremap y   "*y
 
-" 貼り付け
-nnoremap p   "+p
-nnoremap P   "+P
-vnoremap p   "+p
-vnoremap P   "+P
-
-
+" 貼り付け(yankから)
+" nnoremap p   ""p
+" nnoremap P   ""P
+" vnoremap p   ""p
+" vnoremap P   ""P
+" 貼り付け(clipboardから)
+" nnoremap <C-p>   "+p
+nnoremap <C-p>   "+P
+" vnoremap <C-p>   "+P
+" nnoremap <C-P>   "+P
+" vnoremap <C-p>   "+p
+" vnoremap <C-P>   "+P
+"
 " 下へコピー
 nnoremap <C-d> VyPgvV
 vnoremap <C-d> yPgv
@@ -130,7 +154,7 @@ nnoremap <End> <End><Right>
 "===============================
 " 削除
 "===============================
-nnoremap d "+d
+" nnoremap d "+d
 nnoremap <Bs> X
 
 " 行削除
