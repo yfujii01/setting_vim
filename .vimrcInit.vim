@@ -6,6 +6,9 @@
 set encoding=utf-8
 set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp
 
+"方向キーでの移動をオン
+set nocompatible
+
 "マルチバイトの文字を崩れずに表示
 set ambiwidth=double
 

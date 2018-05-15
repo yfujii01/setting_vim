@@ -66,24 +66,31 @@ endif
 " nathanaelkane/vim-indent-guides
 " let g:indent_guides_enable_on_vim_startup = 1
 
-" ファイラーをデフォルトで表示
-let g:vimfiler_as_default_explorer = 1
+" ファイラーをVimFilerに置き換え(:Eで呼び出すと:qで抜けるときに保存されてないと怒られる...)
+" let g:vimfiler_as_default_explorer = 1
 
 "現在開いているバッファをIDE風に開く
 nnoremap <silent> <Leader>fi :<C-u>VimFilerBufferDir -split -simple -winwidth=35 -no-quit<CR>
-if has('vim_starting')
-autocmd VimEnter * VimFilerBufferDir -split -simple -winwidth=35 -no-quit | call s:MoveToFileAtStart()
-endif
-function! s:MoveToFileAtStart()
-  call feedkeys(".")
-  call feedkeys("\<C-w>")
-  call feedkeys("\<C-w>")
-  " call feedkeys("\s")
-  " call feedkeys("\l")
-endfunction
+" if has('vim_starting')
+"
+"
+" autocmd VimEnter * VimFilerBufferDir -split -simple -winwidth=35 -no-quit | call s:MoveToFileAtStart()
+" endif
+" function! s:MoveToFileAtStart()
+"   call feedkeys(".")
+"   call feedkeys("\<C-w>")
+"   call feedkeys("\<C-w>")
+"   " call feedkeys("\s")
+"   " call feedkeys("\l")
+" endfunction
 
 " eで新規タブとして開く
 " let g:vimfiler_edit_action = 'tabopen'
+
+
+
+
+
 
 " gitを便利に使う
 " ステータス行に現在のgitブランチを表示する 	
