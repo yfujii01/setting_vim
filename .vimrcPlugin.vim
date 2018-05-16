@@ -73,7 +73,7 @@ endif
 
 
 "NERDTree用隠しファイルを表示し、カーソルをファイルに移す
-function s:MoveToFileAtStart()
+function! s:MoveToFileAtStart()
   call feedkeys("\I")
   call feedkeys("\<C-w>")
   call feedkeys("\w")

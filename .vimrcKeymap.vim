@@ -166,7 +166,7 @@ vnoremap <C-h> :s///gc<Left><Left><Left><Left>
 inoremap jj <Esc>
 
 " .vimrc再読込
-nnoremap <C-@> :source ~/.vimrc<CR>:noh<CR>:echo '.vimrcを読み込みました★'<CR>
+nnoremap <C-@> :source ~/.vimrc<CR>:noh<CR>:call dein#update()<CR>:echo '.vimrcを読み込みましたよ★'<CR>
 
 " ハイライトを消す
 nnoremap <f3> :noh<CR>
@@ -176,10 +176,14 @@ nnoremap <leader>z :set wrap<CR>
 nnoremap <leader>x :set nowrap<CR>
 
 " プロジェクトツリー表示(プラグイン)
-nnoremap <leader>b :NERDTree<CR>
+" nnoremap <leader>b :NERDTree<CR>
+nnoremap <silent><C-b> :NERDTreeToggle<CR>
 
 
 " タブを切り替える
-nmap <leader>tt <Plug>AirlineSelectPrevTab
+nmap <leader>t <Plug>AirlineSelectNextTab
 " nmap <C-n> <Plug>AirlineSelectNextTab
+
+" ウインドウを切り替える
+nnoremap <leader>w <C-w>w
 
