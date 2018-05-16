@@ -73,14 +73,14 @@ endif
 
 
 "NERDTree用隠しファイルを表示し、カーソルをファイルに移す
-function! s:MoveToFileAtStart()
-  call feedkeys("\I")
-  call feedkeys("\<C-w>")
-  call feedkeys("\w")
-endfunction
-
+" function! s:MoveToFileAtStart()
+"   call feedkeys("\I")
+"   call feedkeys("\<C-w>")
+"   call feedkeys("\w")
+" endfunction
+"
 "vimの起動時に自動的にNERDTreeを開く(call 以降はプラスアルファ)
-autocmd vimenter * NERDTree | call s:MoveToFileAtStart()
+" autocmd vimenter * NERDTree | call s:MoveToFileAtStart()
 
 "vimが空ファイルを開いたときにNERDTreeを自動的に開く
 autocmd StdinReadPre * let s:std_in=1
