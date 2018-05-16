@@ -166,7 +166,7 @@ vnoremap <C-h> :s///gc<Left><Left><Left><Left>
 inoremap jj <Esc>
 
 " .vimrc再読込
-nnoremap <C-@> :source ~/.vimrc<CR>:noh<CR>:call dein#update()<CR>:echo '.vimrcを読み込みましたよ★'<CR>
+" nnoremap <C-@> :source ~/.vimrc<CR>:noh<CR>:call dein#update()<CR>:echo '.vimrcを読み込みましたよ★'<CR>
 
 " ハイライトを消す
 nnoremap <f3> :noh<CR>
@@ -186,4 +186,7 @@ nmap <leader>t <Plug>AirlineSelectNextTab
 
 " ウインドウを切り替える
 nnoremap <leader>w <C-w>w
+
+" C-Spaceを割り当てできるように
+autocmd VimEnter * imap <Nul> <C-Space>
 
