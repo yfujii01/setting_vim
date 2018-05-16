@@ -27,14 +27,6 @@ function create_link2 () {
 	echo 'link create '${dir}'/'${file}
 }
 
-create_link .bash_profile
-create_link .bashrc
-create_link .bashrcImg
-create_link .bashrcAliases
-create_link .bashrcLinux
-
-create_link .gitconfig
-
 create_link .vimrc
 create_link .vimrcInit.vim
 create_link .vimrcColor.vim
@@ -44,7 +36,3 @@ create_link .vimrcKeymap.vim
 create_link .vimPlugin.toml
 create_link .vimLazy.toml
 create_link2 vimAfterSetting.vim ~/.vim/after/plugin
-
-
-source ~/.bashrc
-
