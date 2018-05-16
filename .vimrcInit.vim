@@ -154,3 +154,6 @@ set wildmenu
 " 入力中のコマンドを表示する
 set showcmd
 
+" キーコードシーケンスが終了するのを待つ時間を短くする。
+set ttimeoutlen=10
+
