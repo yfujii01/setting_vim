@@ -88,22 +88,20 @@ vnoremap <C-S-Up>   d<Up>P`[v`]V
 vnoremap <C-S-Down> d<Down>P`[v`]V
 
 " フォーマット(ファイルによって挙動を変える)
-au FileType python nnoremap <C-l> :Autopep8<CR> 
-au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR> 
+au FileType python nnoremap <C-l> :Autopep8<CR>
+au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR>
 au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
 
 "enterで整形設定に行くようにする
 vnoremap <Enter> <Plug>(EasyAlign)
 
-" クリップボードへコピー
-nnoremap <C-c> "+y
-nnoremap <C-x> "+d
-vnoremap <C-c> "+y
-
-vnoremap <C-x> "+d
-" クリップボードから貼り付け
-nnoremap <C-v> "+P
-inoremap <C-v> <C-r>+
+" クリップボード作業
+nnoremap <space>c "+y
+nnoremap <space>x "+d
+vnoremap <space>c "+y
+vnoremap <space>x "+d
+nnoremap <space>v "+P
+inoremap <space>v <C-r>+
 
 " set formatoptions-=ro
 set formatoptions=
@@ -122,22 +120,13 @@ vnoremap <S-Tab> :s/\(^\t\\|^ \{1,4}\)//g<CR>:noh<CR>gv
 inoremap <S-Tab> <Esc>v:s/\(^\t\\|^ \{1,4}\)//g<CR>:noh<CR>i
 
 " spaceでスペースを挿入
-nnoremap <Space> i <ESC><Right>
+" nnoremap <Space> i <ESC><Right>
 
 " Enterで改行
-nnoremap <CR> i<CR><Esc>
+" nnoremap <CR> i<CR><Esc>
 
 " Endで改行コードまで選択
 nnoremap <End> <End><Right>
-
-
-
-" aaaa1bbbb
-" aaaa5bbbb
-" aaaa3bbbb
-" aaaa4bbbb
-" aaaa2bbbb
-" aaaa3bbbb
 
 "===============================
 " 削除
@@ -158,10 +147,6 @@ inoremap <C-y> <Esc>dd
 " inoremap <C-s> <Esc>:w<CR>:echo '保存しました☆彡'<CR>
 
 
-" 置換
-nnoremap <C-h> :%s///gc<Left><Left><Left><Left>
-vnoremap <C-h> :s///gc<Left><Left><Left><Left>
-
 " jjでesc
 inoremap jj <Esc>
 
@@ -177,15 +162,19 @@ nnoremap <leader>x :set nowrap<CR>
 
 " プロジェクトツリー表示(プラグイン)
 " nnoremap <leader>b :NERDTree<CR>
-nnoremap <silent><C-b> :NERDTreeToggle<CR>
+nnoremap <silent><leader>b :NERDTreeToggle<CR>
+nnoremap <silent><leader>b :NERDTreeToggle<CR>
 
 
 " タブを切り替える
 nmap <leader>t <Plug>AirlineSelectNextTab
+nmap <space>t <Plug>AirlineSelectNextTab
+nmap tt <Plug>AirlineSelectNextTab
 " nmap <C-n> <Plug>AirlineSelectNextTab
 
 " ウインドウを切り替える
 nnoremap <leader>w <C-w>w
+nnoremap <space>w <C-w>w
 
 " C-Spaceを割り当てできるように
 autocmd VimEnter * imap <Nul> <C-Space>
@@ -195,4 +184,16 @@ nnoremap <f5> :QuickRun<CR>
 
 " quickrunを途中で止める
 nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
+
+" 検索
+nnoremap <leader>f :vim  %\|cw<left><left><left><left><left>
+nnoremap <space>f :vim  %\|cw<left><left><left><left><left>
+
+" 置換
+nnoremap <space>h :%s///gc<Left><Left><Left><Left>
+vnoremap <space>h :s///gc<Left><Left><Left><Left>
+
+" 戻る進む
+nnoremap <A-left> <C-o>
+nnoremap <A-right> <C-i>
 
