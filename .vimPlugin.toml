@@ -39,11 +39,11 @@ let g:airline_theme = 'papercolor'
 # [[plugins]]
 # repo = 'Townk/vim-autoclose'
 
-[[plugins]]
-repo = 'Yggdroot/indentLine'
-hook_add = '''
-let g:indentLine_char = '¦'
-'''
+# [[plugins]]
+# repo = 'Yggdroot/indentLine'
+# hook_add = '''
+# let g:indentLine_char = '¦'
+# '''
 
 [[plugins]]
 repo = 'bronson/vim-trailing-whitespace'
