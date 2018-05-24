@@ -190,3 +190,9 @@ nnoremap <leader>w <C-w>w
 " C-Spaceを割り当てできるように
 autocmd VimEnter * imap <Nul> <C-Space>
 
+" quickrunを実行する
+nnoremap <f5> :QuickRun<CR>
+
+" quickrunを途中で止める
+nnoremap <expr><silent> <C-c> quickrun#is_running() ? quickrun#sweep_sessions() : "\<C-c>"
+
