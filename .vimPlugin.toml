@@ -61,6 +61,9 @@ repo = 'scrooloose/nerdtree'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+hook_add = '''
+let g:quickrun_config={'*': {'split': ''}}
+'''
 
 # ウインドウのリサイズを簡単にする
 # c-eでリサイズモード開始
