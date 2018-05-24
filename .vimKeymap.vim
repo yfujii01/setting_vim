@@ -183,15 +183,20 @@ nnoremap <silent><leader>n :NERDTreeToggle<CR>
 nnoremap <silent><space>n :NERDTreeToggle<CR>
 
 
-" タブを切り替える
-nmap <leader>t <Plug>AirlineSelectNextTab
-nmap <space>t <Plug>AirlineSelectNextTab
-nmap tt <Plug>AirlineSelectNextTab
+" タブを切り替える(airlineのタブ用)
+" nmap <leader>t <Plug>AirlineSelectNextTab
+" nmap <space>t <Plug>AirlineSelectNextTab
+" nmap tt <Plug>AirlineSelectNextTab
 " nmap <C-n> <Plug>AirlineSelectNextTab
+
+" タブを切り替える
+nnoremap tt gt
 
 " ウインドウを切り替える
 nnoremap <leader>w <C-w>w
 nnoremap <space>w <C-w>w
+nnoremap <tab><tab> <C-w>w
+
 
 " C-Spaceを割り当てできるように
 autocmd VimEnter * imap <Nul> <C-Space>
