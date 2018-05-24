@@ -71,13 +71,13 @@ nnoremap <A-C-End>  <C-v><C-End>
 vnoremap <expr> I  <SID>force_blockwise_visual('I')
 vnoremap <expr> A  <SID>force_blockwise_visual('A')
 function! s:force_blockwise_visual(next_key)
-  if mode() ==# 'v'
-    return "\<C-v>" . a:next_key
-  elseif mode() ==# 'V'
-    return "\<C-v>0o$" . a:next_key
-  else  " mode() ==# "\<C-v>"
-    return a:next_key
-  endif
+	if mode() ==# 'v'
+		return "\<C-v>" . a:next_key
+	elseif mode() ==# 'V'
+		return "\<C-v>0o$" . a:next_key
+	else  " mode() ==# "\<C-v>"
+		return a:next_key
+	endif
 endfunction
 
 
@@ -88,9 +88,22 @@ vnoremap <C-S-Up>   d<Up>P`[v`]V
 vnoremap <C-S-Down> d<Down>P`[v`]V
 
 " フォーマット(ファイルによって挙動を変える)
-au FileType python nnoremap <C-l> :Autopep8<CR>
-au FileType markdown nnoremap <C-l> ggvG$:'<,'>Alignta \|<CR>
-au FileType gitcommit nnoremap <C-l> V:s/^#\t//g<CR>:s/ \+/ /g<CR>:noh<CR>
+function! My_format()
+	echo 'フォーマットします'
+	call feedkeys("gg=G")
+	call feedkeys(:FixWhitespace\<cr>")
+	" 元の位置に戻る
+	call feedkeys("\<c-o>")
+	call feedkeys("\<c-o>")
+
+	if &filetype == "python"
+		call feedKeys(":Autopep8\<CR>")
+	elseif &filetype == "markdown"
+		call feedkeys("ggvG$:'<,'>Alignta \|\<CR>")
+	else
+	endif
+endfunction
+nnoremap <space>l :call My_format()<CR>
 
 "enterで整形設定に行くようにする
 vnoremap <Enter> <Plug>(EasyAlign)
@@ -98,6 +111,7 @@ vnoremap <Enter> <Plug>(EasyAlign)
 " クリップボード作業
 nnoremap <space>c "+y
 nnoremap <space>x "+d
+" vnoremap <space>c "*y:'echo クリップボードへコピーしました'<CR>
 vnoremap <space>c "+y
 vnoremap <space>x "+d
 nnoremap <space>v "+P
@@ -152,18 +166,21 @@ inoremap jj <Esc>
 
 " .vimrc再読込
 " nnoremap <C-@> :source ~/.vimrc<CR>:noh<CR>:call dein#update()<CR>:echo '.vimrcを読み込みましたよ★'<CR>
+nnoremap <space>@ :source ~/.vimrc<CR>:noh<CR>:echo '.vimrcを読み込みましたよ★'<CR>
+
 
 " ハイライトを消す
 nnoremap <f3> :noh<CR>
 
 " 画面端で折り返すか切り替え
-nnoremap <leader>z :set wrap<CR>
-nnoremap <leader>x :set nowrap<CR>
+nnoremap <space>z :set wrap!<CR>
+" nnoremap <leader>z :set wrap<CR>
+" nnoremap <leader>x :set nowrap<CR>
 
 " プロジェクトツリー表示(プラグイン)
 " nnoremap <leader>b :NERDTree<CR>
-nnoremap <silent><leader>b :NERDTreeToggle<CR>
-nnoremap <silent><leader>b :NERDTreeToggle<CR>
+nnoremap <silent><leader>n :NERDTreeToggle<CR>
+nnoremap <silent><space>n :NERDTreeToggle<CR>
 
 
 " タブを切り替える
@@ -196,4 +213,7 @@ vnoremap <space>h :s///gc<Left><Left><Left><Left>
 " 戻る進む
 nnoremap <A-left> <C-o>
 nnoremap <A-right> <C-i>
+
+" コメント切り替え
+nnoremap <C-\> :TComment<CR><down>
 

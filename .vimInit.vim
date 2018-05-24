@@ -34,7 +34,7 @@ set shiftwidth=4
 " function! ZenkakuSpace()
 "     highlight ZenkakuSpace cterm=reverse ctermfg=DarkMagenta gui=reverse guifg=DarkMagenta
 " endfunction
-"    
+"
 " if has('syntax')
 "     augroup ZenkakuSpace
 "         autocmd!
@@ -92,21 +92,21 @@ set laststatus=2
 " set clipboard=unnamedplus
 " 標準のyankとclipboard設定を使う
 set clipboard=
-" set 
+" set
 " clipboard&
 " set clipboard^=unnamedplus
 
 " マウスの有効化
-if has('mouse')
-    set mouse=a
-    if has('mouse_sgr')
-        set ttymouse=sgr
-    elseif v:version > 703 || v:version is 703 && has('patch632')
-        set ttymouse=sgr
-    else
-        set ttymouse=xterm2
-    endif
-endif
+" if has('mouse')
+"     set mouse=a
+"     if has('mouse_sgr')
+"         set ttymouse=sgr
+"     elseif v:version > 703 || v:version is 703 && has('patch632')
+"         set ttymouse=sgr
+"     else
+"         set ttymouse=xterm2
+"     endif
+" endif
 
 " 行末の1文字先までカーソルを移動できるように
 set virtualedit=onemore

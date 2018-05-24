@@ -91,3 +91,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "開いている唯一のウィンドウがNERDTreeであれば閉じる
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" 隠しファイルをデフォルトで表示させる
+let NERDTreeShowHidden = 1
+

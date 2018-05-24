@@ -4,8 +4,8 @@ repo    = 'Shougo/dein.vim'
 [[plugins]]
 repo    = 'tpope/vim-fugitive'
 
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
+# [[plugins]]
+# repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
 repo    = 'tomtom/tcomment_vim'
