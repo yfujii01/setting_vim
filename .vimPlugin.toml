@@ -62,3 +62,8 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
+# ウインドウのリサイズを簡単にする
+# c-eでリサイズモード開始
+[[plugins]]
+repo = 'simeji/winresizer'
+
