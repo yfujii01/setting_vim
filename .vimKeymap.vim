@@ -91,7 +91,7 @@ vnoremap <C-S-Down> d<Down>P`[v`]V
 function! My_format()
 	echo 'フォーマットします'
 	call feedkeys("gg=G")
-	call feedkeys(:FixWhitespace\<cr>")
+	call feedkeys(":FixWhitespace\<cr>")
 	" 元の位置に戻る
 	call feedkeys("\<c-o>")
 	call feedkeys("\<c-o>")
