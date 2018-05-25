@@ -23,7 +23,21 @@ on_ft = ['python']
 [[plugins]]
 repo =  'scrooloose/syntastic'
 
+# [[plugins]]
+# repo = 'mattn/jscomplete-vim'
+# on_ft = ['javascript']
+
 [[plugins]]
-repo = 'mattn/jscomplete-vim'
+repo = 'myhere/vim-nodejs-complete'
 on_ft = ['javascript']
+hook_add = '''
+setlocal omnifunc=nodejscomplete#CompleteJS
+if !exists('g:neocomplcache_omni_functions')
+	let g:neocomplcache_omni_functions = {}
+endif
+let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
+
+let g:node_usejscomplete = 1
+
+'''
 

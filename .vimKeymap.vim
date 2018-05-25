@@ -225,3 +225,5 @@ nnoremap <A-right> <C-i>
 " コメント切り替え
 nnoremap <C-\> :TComment<CR><down>
 
+" 補完
+inoremap <C-space> <c-x><c-o>
