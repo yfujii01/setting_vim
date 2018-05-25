@@ -70,3 +70,10 @@ let g:quickrun_config={'*': {'split': ''}}
 [[plugins]]
 repo = 'simeji/winresizer'
 
+# チートシート
+[[plugins]]
+repo = 'reireias/vim-cheatsheet'
+hook_add = '''
+let g:cheatsheet#cheat_file = '~/.vimCheat.md'
+'''
+

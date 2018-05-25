@@ -216,7 +216,7 @@ nnoremap <space>f :vim  %\|cw<left><left><left><left><left>
 
 " 置換
 nnoremap <space>h :%s///gc<Left><Left><Left><Left>
-vnoremap <space>h :s///gc<Left><Left><Left><Left>
+vnoremap <space>h :s/\%V//gc<Left><Left><Left><Left>
 
 " 戻る進む
 nnoremap <A-left> <C-o>
