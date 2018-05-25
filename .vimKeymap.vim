@@ -90,17 +90,20 @@ vnoremap <C-S-Down> d<Down>P`[v`]V
 " フォーマット(ファイルによって挙動を変える)
 function! My_format()
 	echo 'フォーマットします'
-	call feedkeys("gg=G")
-	call feedkeys(":FixWhitespace\<cr>")
-	" 元の位置に戻る
-	call feedkeys("\<c-o>")
-	call feedkeys("\<c-o>")
 
 	if &filetype == "python"
-		call feedKeys(":Autopep8\<CR>")
+		call feedkeys(":Autopep8\<CR>")
 	elseif &filetype == "markdown"
+		call feedkeys("gg=G")
+		call feedkeys(":FixWhitespace\<cr>")
+		call feedkeys("\<c-o>")
+		call feedkeys("\<c-o>")
 		call feedkeys("ggvG$:'<,'>Alignta \|\<CR>")
 	else
+		call feedkeys("gg=G")
+		call feedkeys(":FixWhitespace\<cr>")
+		call feedkeys("\<c-o>")
+		call feedkeys("\<c-o>")
 	endif
 endfunction
 nnoremap <space>l :call My_format()<CR>
