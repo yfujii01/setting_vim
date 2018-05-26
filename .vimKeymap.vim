@@ -15,12 +15,19 @@ vnoremap j gj
 vnoremap k gk
 nnoremap <C-End> <C-End><Right>
 
-" visual modeの移動はshift押しながら
-vnoremap <S-Down>  gj
-vnoremap <S-Up>    gk
-vnoremap <S-Left>  <Left>
-vnoremap <S-Right> <Right>
+" insertモードで方向キー移動するとnormalモードに戻る
+inoremap <up>      <esc><up>
+inoremap <down>    <esc><down>
+inoremap <left>    <esc><left>
+inoremap <right>   <esc><right>
 
+
+" visual modeの移動はshift押しながら
+" vnoremap <S-Down>  gj
+" vnoremap <S-Up>    gk
+" vnoremap <S-Left>  <Left>
+" vnoremap <S-Right> <Right>
+"
 " visual modeを解除して移動
 " vnoremap <Up>    <ESC><Up>
 " vnoremap <Left>  <ESC><Left>
