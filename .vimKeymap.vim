@@ -233,3 +233,7 @@ nnoremap <C-\> :TComment<CR><down>
 
 " 補完
 inoremap <C-space> <c-x><c-o>
+
+" クリップボードへコピー
+vnoremap <insert> "+y
+
