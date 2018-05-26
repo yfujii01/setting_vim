@@ -4,7 +4,7 @@
 "===============================
 "エンコード
 set encoding=utf-8
-set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp,utf-16le
+set fileencodings=utf-8,sjis,iso-2022-jp,euc-jp,utf-16le,ucs-bom,default,latin1
 
 "方向キーでの移動をオン
 set nocompatible
