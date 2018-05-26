@@ -155,7 +155,7 @@ nnoremap <End> <End><Right>
 " 削除
 "===============================
 " nnoremap d "+d
-nnoremap <Bs> X
+" nnoremap <Bs> X
 
 " 行削除
 nnoremap <C-y> dd
