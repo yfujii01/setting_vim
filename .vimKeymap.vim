@@ -23,16 +23,16 @@ inoremap <right>   <esc><right>
 
 
 " visual modeの移動はshift押しながら
-" vnoremap <S-Down>  gj
-" vnoremap <S-Up>    gk
-" vnoremap <S-Left>  <Left>
-" vnoremap <S-Right> <Right>
-"
+vnoremap <S-Down>  gj
+vnoremap <S-Up>    gk
+vnoremap <S-Left>  <Left>
+vnoremap <S-Right> <Right>
+
 " visual modeを解除して移動
-" vnoremap <Up>    <ESC><Up>
-" vnoremap <Left>  <ESC><Left>
-" vnoremap <Right> <ESC><Right>
-" vnoremap <Down>  <ESC><Down>
+vnoremap <Up>    <ESC><Up>
+vnoremap <Left>  <ESC><Left>
+vnoremap <Right> <ESC><Right>
+vnoremap <Down>  <ESC><Down>
 
 " スクロール
 nnoremap <C-Up>   <C-y>
@@ -42,7 +42,6 @@ nnoremap <C-Down> <C-e>
 nnoremap <C-a> ggvG$
 
 " 選択しつつビジュアルモードへ
-
 inoremap <S-Up>     <ESC>V<Up>
 inoremap <S-Down>   <ESC>V<Down>
 inoremap <S-Left>   <ESC>v<Left>
