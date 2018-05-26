@@ -77,3 +77,9 @@ hook_add = '''
 let g:cheatsheet#cheat_file = '~/.vimCheat.md'
 '''
 
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
+'''
+
