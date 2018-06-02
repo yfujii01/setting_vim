@@ -40,4 +40,3 @@ let g:neocomplcache_omni_functions.javascript = 'nodejscomplete#CompleteJS'
 let g:node_usejscomplete = 1
 
 '''
-

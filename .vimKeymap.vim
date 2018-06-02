@@ -16,10 +16,10 @@ vnoremap k gk
 nnoremap <C-End> <C-End><Right>
 
 " insertモードで方向キー移動するとnormalモードに戻る
-inoremap <up>      <esc><up>
-inoremap <down>    <esc><down>
-inoremap <left>    <esc><left>
-inoremap <right>   <esc><right>
+" inoremap <up>      <esc><up>
+" inoremap <down>    <esc><down>
+" inoremap <left>    <esc><left>
+" inoremap <right>   <esc><right>
 
 
 " visual modeの移動はshift押しながら
