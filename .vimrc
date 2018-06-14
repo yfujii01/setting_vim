@@ -129,7 +129,7 @@ set ttimeoutlen=10
 syntax on
 
 "カラースキーマ
-" colorscheme desert
+colorscheme desert
 "colorscheme molokai
 "colorscheme atom-dark
 
