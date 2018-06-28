@@ -161,53 +161,53 @@ nnoremap <C-End> <C-End><Right>
 " inoremap <right>   <esc><right>
 
 
-" visual modeの移動はshift押しながら
-vnoremap <S-Down>  gj
-vnoremap <S-Up>    gk
-vnoremap <S-Left>  <Left>
-vnoremap <S-Right> <Right>
-
-" visual modeを解除して移動
-vnoremap <Up>    <ESC><Up>
-vnoremap <Left>  <ESC><Left>
-vnoremap <Right> <ESC><Right>
-vnoremap <Down>  <ESC><Down>
-
-" スクロール
-nnoremap <C-Up>   <C-y>
-nnoremap <C-Down> <C-e>
-
-" 全選択
-nnoremap <C-a> ggvG$
-
-" 選択しつつビジュアルモードへ
-inoremap <S-Up>     <ESC>V<Up>
-inoremap <S-Down>   <ESC>V<Down>
-inoremap <S-Left>   <ESC>v<Left>
-inoremap <S-Right>  <ESC>v<Right>
-nnoremap <S-Up>     V
-nnoremap <S-Down>   V
-nnoremap <S-Left>   v<Left>
-nnoremap <S-Right>  v<Right>
-nnoremap <S-Home>   v<Home>
-nnoremap <S-End>    v<End>
-nnoremap <S-C-Home> v<C-Home>
-nnoremap <S-C-End>  v<C-End>
-
-inoremap <A-Up>     <ESC><C-v><Up>
-inoremap <A-Down>   <ESC><C-v><Down>
-inoremap <A-Left>   <ESC><C-v><Left>
-inoremap <A-Right>  <ESC><C-v><Right>
-
-nnoremap <A-Up>     <C-v><Up>
-nnoremap <A-Down>   <C-v><Down>
-nnoremap <A-Left>   <C-v><Left>
-nnoremap <A-Right>  <C-v><Right>
-nnoremap <A-Home>   <C-v><Home>
-nnoremap <A-End>    <C-v><End>
-nnoremap <A-C-Home> <C-v><C-Home>
-nnoremap <A-C-End>  <C-v><C-End>
-
+"" visual modeの移動はshift押しながら
+"vnoremap <S-Down>  gj
+"vnoremap <S-Up>    gk
+"vnoremap <S-Left>  <Left>
+"vnoremap <S-Right> <Right>
+"
+"" visual modeを解除して移動
+"vnoremap <Up>    <ESC><Up>
+"vnoremap <Left>  <ESC><Left>
+"vnoremap <Right> <ESC><Right>
+"vnoremap <Down>  <ESC><Down>
+"
+"" スクロール
+"nnoremap <C-Up>   <C-y>
+"nnoremap <C-Down> <C-e>
+"
+"" 全選択
+"nnoremap <C-a> ggvG$
+"
+"" 選択しつつビジュアルモードへ
+"inoremap <S-Up>     <ESC>V<Up>
+"inoremap <S-Down>   <ESC>V<Down>
+"inoremap <S-Left>   <ESC>v<Left>
+"inoremap <S-Right>  <ESC>v<Right>
+"nnoremap <S-Up>     V
+"nnoremap <S-Down>   V
+"nnoremap <S-Left>   v<Left>
+"nnoremap <S-Right>  v<Right>
+"nnoremap <S-Home>   v<Home>
+"nnoremap <S-End>    v<End>
+"nnoremap <S-C-Home> v<C-Home>
+"nnoremap <S-C-End>  v<C-End>
+"
+"inoremap <A-Up>     <ESC><C-v><Up>
+"inoremap <A-Down>   <ESC><C-v><Down>
+"inoremap <A-Left>   <ESC><C-v><Left>
+"inoremap <A-Right>  <ESC><C-v><Right>
+"
+"nnoremap <A-Up>     <C-v><Up>
+"nnoremap <A-Down>   <C-v><Down>
+"nnoremap <A-Left>   <C-v><Left>
+"nnoremap <A-Right>  <C-v><Right>
+"nnoremap <A-Home>   <C-v><Home>
+"nnoremap <A-End>    <C-v><End>
+"nnoremap <A-C-Home> <C-v><C-Home>
+"nnoremap <A-C-End>  <C-v><C-End>
+"
 "===============================
 " 編集系
 "===============================
