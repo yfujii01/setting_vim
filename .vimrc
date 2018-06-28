@@ -12,7 +12,7 @@ set nocompatible
 set ambiwidth=double
 
 "行番号
-set number
+"set number
 
 "タブの間隔
 set tabstop=4
