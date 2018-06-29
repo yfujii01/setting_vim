@@ -32,7 +32,8 @@ augroup vimrcEx
 augroup END
 
 " 画面端で折り返しはしないをデフォルトにする
-set nowrap
+"set nowrap
+set wrap
 
 " インクリメンタルサーチ. １文字入力毎に検索を行う
 set incsearch
@@ -354,3 +355,4 @@ inoremap <C-space> <c-x><c-o>
 
 " クリップボードへコピー
 vnoremap <insert> "+y
+
